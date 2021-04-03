@@ -1,0 +1,67 @@
+﻿[
+  {
+    "Name": "Gaston",
+    "Description": "The most reliable guy for the job.",
+    "SignatureWeapon": "G19",
+    "SignatureMelee": "Tanto",
+    "StartingMagsAmount": 2,
+    "AmmoTiers": {
+      "tier0":"9x19mmCartridgeTracer",
+      "tier1":"9x19mmCartridgeJHP",
+      "tier2":"9x19mmCartridge+PFMJ",
+      "tier3":"9x19mmCartridge+PJHP",
+      "tier4":"9x19mmCartridge+PAPI"
+    },
+    "Magazines": [
+      "MagazineG19_19rnd",
+      "MagazineG17Standard"
+    ],
+    "AmmoShopMultiplier": 1,
+    "SosigHpModifier": 0.8,
+    "SosigSpeedModifier": 1,
+    "EncryptionsModifier": 0.8
+  },
+  {
+    "Name": "Anton",
+    "Description": "Let me do a soundcheck... on your head!",
+    "SignatureWeapon": "M1911",
+    "SignatureMelee": "Karambit",
+    "StartingMagsAmount": 2,
+    "AmmoTiers": {
+      "tier0":"45ACPCartridgeTracer",
+      "tier1":"45ACPCartridgeJHP",
+      "tier2":"45ACPCartridge+PFMJ",
+      "tier3":"45ACPCartridge+PJHP",
+      "tier4":"45ACPCartridge+PAPI"
+    },
+    "Magazines": [
+      "MagazineM1911",
+      "MagazineM1911Tactical"
+    ],
+    "AmmoShopMultiplier": 1,
+    "SosigHpModifier": 1,
+    "SosigSpeedModifier": 1,
+    "EncryptionsModifier": 0.7
+  },
+  {
+    "Name": "Mr. B.",
+    "Description": "Thats gonna sting.",
+    "SignatureWeapon": "FiveSevenFDE",
+    "SignatureMelee": "CombatKnife",
+    "StartingMagsAmount": 1,
+    "AmmoTiers": {
+      "tier0":"fillAmmoTypes",
+      "tier1":"fillAmmoTypes",
+      "tier2":"fillAmmoTypes",
+      "tier3":"fillAmmoTypes",
+      "tier4":"fillAmmoTypes"
+    },
+    "Magazines": [
+      "MagazineFiveSeven"
+    ],
+    "AmmoShopMultiplier": 1,
+    "SosigHpModifier": 1,
+    "SosigSpeedModifier": 1.1,
+    "EncryptionsModifier": 0.9
+  }
+]
