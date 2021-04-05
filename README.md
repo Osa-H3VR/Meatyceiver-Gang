@@ -5,7 +5,7 @@ No sosigs in sight
 Atleast no familiar ones
 The only things you hear
 Sound of metal replicants scraping
-Robotic beeps of the turrets
+Robotic beeps and boops
 Destroy the all the nodes
 Free the world
 Or rather what is left
@@ -68,7 +68,7 @@ Your hunger for shooting nodes is still unfulfilled and you need more?
 
 <sub>*wow, catchy name*</sub>
 
-I've included a simple cli tool that I personally use to create the characters themselves!
+I've included a simple commandline tool that I personally use to create the characters themselves!
 
 The output then can be additionally modified to your liking, to really put **U** in "Yo**U**r character". 
 
