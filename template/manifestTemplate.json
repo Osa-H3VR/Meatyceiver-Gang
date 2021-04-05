@@ -13,8 +13,8 @@
   "assets": {
     "patcher": {},
     "setup": {
-      "_NameId_": "h3vr.tnhtweaker.deli:character",
-      "_CustomSosigs_":"_RemoveMe_"
+      "_CustomSosigs_":"_RemoveMe_",
+      "_Name_/": "h3vr.tnhtweaker.deli:character"
     },
     "runtime": {}
   }

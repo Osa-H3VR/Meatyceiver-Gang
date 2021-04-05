@@ -128,7 +128,7 @@ namespace CharGen
         private static string GenerateManifest(MeatyCharacter character)
         {
             string output = _manifestFileTemplate;
-            output = Helpers.ReplaceInString(output, "Name", $"\"{character.Name}\"");
+            output = Helpers.ReplaceInString(output, "Name", $"{character.Name}", false);
             output = Helpers.ReplaceInString(output, "NameId",
                 $"{character.Name.ToLowerInvariant().Replace(" ", string.Empty)}", false);
             output = Helpers.ReplaceInString(output, "Version", $"\"{character.Version}\"");
