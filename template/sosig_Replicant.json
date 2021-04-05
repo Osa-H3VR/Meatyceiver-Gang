@@ -1,0 +1,283 @@
+{
+  "DisplayName": "sosig_Replicant_HoldSpecific",
+  "SosigEnemyCategory": "Meatyceiver",
+  "SosigEnemyID": "sosig_Replicant_HoldSpecific",
+  "SosigPrefabs": [
+    "SosigBody_Junkbot"
+  ],
+  "Configs": [
+    {
+      "ViewDistance": 200.0,
+      "HearingDistance": 300.0,
+      "MaxFOV": 80.0,
+      "SearchExtentsModifier": 8.0,
+      "DoesAggroOnFriendlyFire": true,
+      "HasABrain": true,
+      "DoesDropWeaponsOnBallistic": false,
+      "CanPickupRanged": true,
+      "CanPickupMelee": true,
+      "CanPickupOther": true,
+      "TargetCapacity": 5,
+      "TargetTrackingTime": 2.0,
+      "NoFreshTargetTime": 1.5,
+      "AssaultPointOverridesSkirmishPointWhenFurtherThan": 200.0,
+      "RunSpeed": "3.5_SosigSpeedModifier_",
+      "WalkSpeed": "1.4_SosigSpeedModifier_",
+      "SneakSpeed": "0.6_SosigSpeedModifier_",
+      "CrawlSpeed": "0.3_SosigSpeedModifier_",
+      "TurnSpeed": "6.0_SosigSpeedModifier_",
+      "MaxJointLimit": 8.0,
+      "MovementRotMagnitude": 3.0,
+      "TotalMustard": 0.0,
+      "BleedDamageMult": 0.0,
+      "BleedRateMultiplier": 0.7,
+      "BleedVFXIntensity": 0.0,
+      "DamMult_Projectile": 1.0,
+      "DamMult_Explosive": 8.0,
+      "DamMult_Melee": 0.6,
+      "DamMult_Piercing": 1.0,
+      "DamMult_Blunt": 0.5,
+      "DamMult_Cutting": 0.0,
+      "DamMult_Thermal": 0.2,
+      "DamMult_Chilling": 1.0,
+      "DamMult_EMP": 1.0,
+      "LinkDamageMultipliers": [
+        "6.5_SosigHpModifier_",
+        "3.0_SosigHpModifier_",
+        "0.8_SosigHpModifier_",
+        "1.4_SosigHpModifier_"
+      ],
+      "LinkStaggerMultipliers": [
+        1.0,
+        0.02,
+        0.02,
+        1.0
+      ],
+      "StartingLinkIntegrity": [
+        {
+          "x": 100.0,
+          "y": 100.0
+        },
+        {
+          "x": 100.0,
+          "y": 100.0
+        },
+        {
+          "x": 100.0,
+          "y": 100.0
+        },
+        {
+          "x": 100.0,
+          "y": 100.0
+        }
+      ],
+      "StartingChanceBrokenJoint": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ShudderThreshold": 2.8,
+      "ConfusionThreshold": 0.8,
+      "ConfusionMultiplier": 6.0,
+      "ConfusionTimeMax": 6.0,
+      "StunThreshold": 0.4,
+      "StunMultiplier": 2.0,
+      "StunTimeMax": 4.0,
+      "CanBeGrabbed": true,
+      "CanBeSevered": false,
+      "CanBeStabbed": false,
+      "CanBeSurpressed": true,
+      "SuppressionMult": 0.6,
+      "DoesJointBreakKill_Head": false,
+      "DoesJointBreakKill_Upper": false,
+      "DoesJointBreakKill_Lower": false,
+      "DoesSeverKill_Head": true,
+      "DoesSeverKill_Upper": true,
+      "DoesSeverKill_Lower": true,
+      "DoesExplodeKill_Head": true,
+      "DoesExplodeKill_Upper": true,
+      "DoesExplodeKill_Lower": true
+    }
+  ],
+  "ConfigsEasy": [
+    {
+      "ViewDistance": 150.0,
+      "HearingDistance": 150.0,
+      "MaxFOV": 80.0,
+      "SearchExtentsModifier": 8.0,
+      "DoesAggroOnFriendlyFire": false,
+      "HasABrain": true,
+      "DoesDropWeaponsOnBallistic": false,
+      "CanPickupRanged": true,
+      "CanPickupMelee": true,
+      "CanPickupOther": true,
+      "TargetCapacity": 5,
+      "TargetTrackingTime": 2.0,
+      "NoFreshTargetTime": 1.5,
+      "AssaultPointOverridesSkirmishPointWhenFurtherThan": 200.0,
+      "RunSpeed": 3.5,
+      "WalkSpeed": 1.4,
+      "SneakSpeed": 0.6,
+      "CrawlSpeed": 0.3,
+      "TurnSpeed": 6.0,
+      "MaxJointLimit": 8.0,
+      "MovementRotMagnitude": 3.0,
+      "TotalMustard": 0.0,
+      "BleedDamageMult": 0.0,
+      "BleedRateMultiplier": 0.7,
+      "BleedVFXIntensity": 0.0,
+      "DamMult_Projectile": 1.0,
+      "DamMult_Explosive": 8.0,
+      "DamMult_Melee": 0.6,
+      "DamMult_Piercing": 1.0,
+      "DamMult_Blunt": 0.5,
+      "DamMult_Cutting": 0.0,
+      "DamMult_Thermal": 0.2,
+      "DamMult_Chilling": 1.0,
+      "DamMult_EMP": 1.0,
+      "LinkDamageMultipliers": [
+        6.5,
+        3.0,
+        0.8,
+        1.4
+      ],
+      "LinkStaggerMultipliers": [
+        1.0,
+        0.02,
+        0.02,
+        1.0
+      ],
+      "StartingLinkIntegrity": [
+        {
+          "x": 100.0,
+          "y": 100.0
+        },
+        {
+          "x": 100.0,
+          "y": 100.0
+        },
+        {
+          "x": 100.0,
+          "y": 100.0
+        },
+        {
+          "x": 100.0,
+          "y": 100.0
+        }
+      ],
+      "StartingChanceBrokenJoint": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ShudderThreshold": 2.8,
+      "ConfusionThreshold": 0.8,
+      "ConfusionMultiplier": 6.0,
+      "ConfusionTimeMax": 6.0,
+      "StunThreshold": 0.4,
+      "StunMultiplier": 2.0,
+      "StunTimeMax": 4.0,
+      "CanBeGrabbed": true,
+      "CanBeSevered": false,
+      "CanBeStabbed": false,
+      "CanBeSurpressed": true,
+      "SuppressionMult": 0.6,
+      "DoesJointBreakKill_Head": false,
+      "DoesJointBreakKill_Upper": false,
+      "DoesJointBreakKill_Lower": false,
+      "DoesSeverKill_Head": true,
+      "DoesSeverKill_Upper": true,
+      "DoesSeverKill_Lower": true,
+      "DoesExplodeKill_Head": true,
+      "DoesExplodeKill_Upper": true,
+      "DoesExplodeKill_Lower": true
+    }
+  ],
+  "OutfitConfigs": [
+    {
+      "Headwear": [
+        "SosigAccessory_Tactical_Helmet_Winter"
+      ],
+      "Chance_Headwear": 1.0,
+      "ForceWearAllHead": false,
+      "Eyewear": [],
+      "Chance_Eyewear": 0.0,
+      "ForceWearAllEye": false,
+      "Facewear": [
+        "SosigAccessory_Tactical_WelderMask_Winter"
+      ],
+      "Chance_Facewear": 1.0,
+      "ForceWearAllFace": false,
+      "Torsowear": [
+        "SosigAccessory_Tactical_MediumArmour_Winter"
+      ],
+      "Chance_Torsowear": 1.0,
+      "ForceWearAllTorso": false,
+      "Pantswear": [
+        "SosigAccessory_Tactical_HeavyPants_Winter"
+      ],
+      "Chance_Pantswear": 1.0,
+      "ForceWearAllPants": false,
+      "Pantswear_Lower": [
+        "SosigAccessory_Tactical_LightPants_Winter"
+      ],
+      "Chance_Pantswear_Lower": 1.0,
+      "ForceWearAllPantsLower": false,
+      "Backpacks": [
+        "SosigAccessory_Tactical_Backpack_Winter"
+      ],
+      "Chance_Backpacks": 1.0,
+      "ForceWearAllBackpacks": false
+    }
+  ],
+  "WeaponOptions": [
+    "SosiggunFutureBullpov",
+    "SosiggunFutureNachtigal",
+    "SosiggunFutureMeatleStorm"
+  ],
+  "WeaponOptionsSecondary": [
+    "Sosiggrenade_Meathack"
+  ],
+  "WeaponOptionsTertiary": [
+    "Sosiggrenade_Meathack"
+  ],
+  "SecondaryChance": 0.3,
+  "TertiaryChance": 0.1,
+  "DroppedLootChance": 1.0,
+  "DroppedObjectPool": {
+    "Category": "Firearm",
+    "Rarity": 0.0,
+    "RequiredQuest": null,
+    "ItemsToSpawn": 0,
+    "MinAmmoCapacity": 0,
+    "MaxAmmoCapacity": 0,
+    "NumMagsSpawned": 0,
+    "NumClipsSpawned": 0,
+    "NumRoundsSpawned": 0,
+    "SpawnMagAndClip": false,
+    "BespokeAttachmentChance": 0.0,
+    "IsCompatibleMagazine": false,
+    "AutoPopulateGroup": false,
+    "ForceSpawnAllSubPools": false,
+    "IDOverride": [],
+    "Eras": [],
+    "Sets": [],
+    "Sizes": [],
+    "Actions": [],
+    "Modes": [],
+    "ExcludedModes": [],
+    "FeedOptions": [],
+    "MountsAvailable": [],
+    "RoundPowers": [],
+    "Features": [],
+    "MeleeStyles": [],
+    "MeleeHandedness": [],
+    "MountTypes": [],
+    "PowerupTypes": null,
+    "ThrownTypes": [],
+    "ThrownDamageTypes": [],
+    "SubGroups": []
+  }
+}

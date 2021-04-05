@@ -1,0 +1,21 @@
+﻿{
+  "guid": "h3vr.tnhtweaker._NameId_",
+  "version": "_Version_",
+  "require": "0.3.0",
+  "dependencies": {
+    "h3vr.tnhtweaker.deli": "1.6.0"
+  },
+  "name": "_Name_",
+  "authors": [
+    "Osa__PL",
+    "Devyn Myers (Take & Hold Tweaker - required)"
+  ],
+  "assets": {
+    "patcher": {},
+    "setup": {
+      "_NameId_": "h3vr.tnhtweaker.deli:character",
+      "_CustomSosigs_":"_RemoveMe_"
+    },
+    "runtime": {}
+  }
+}

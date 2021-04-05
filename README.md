@@ -28,22 +28,23 @@ This set of characters is an idea that, at the same time, I wanted to create a R
 - Single hp crate per supply, only the minimum to keep you going.
 - If you screw up, and are out of ammo during hold, no worries, you always get a free sosig with a mag or two that will spawn some time after the nodes start to be available.
 Remember though, each seconds loses you points, so better come in prepared.
-- Shops only sells high tier ammo (costly, you get less) low tier ammo (cheaper, you get more) and explosives to deal with those pesky replicants.
+- Shops only sells ammo, both premium and cheap, additional attachments and explosives to deal with those pesky replicants.
+- Cheap ammo category can give you all types of ammo, Premium ammo category gives you currently unlocked ammo type or better, but overall less bullets per token.
+- Scouting drones, are weak, but can make Replicants aware of your location just by generating noise. Deal with them quickly.
 
 ## Bugs:
 - Turrets can, and will spawn knocked down
-- On some maps, patrols like to congregate in small areas (Promeatus middle area is, I think, the worst offender for that)
-- There is a bug in TnHTweaker (1.6.1), that will still give you useless shotgun ammo from Ammo Purchase station, should be fixed in next release (ty devyndamonster)
 - Regenerative encryptions can be really annoying on some custom maps (Looking at you Island Compounds Warehouse, with your dumb celling beams)
 
 ## TODO:
 - Can I just use the the robot sosigs from winter wasteland?
     - if they work
-    - and actually have thier weakpoint
-    - I just need to add higher hp and higher hearing and fov capacity
+        - and actually have the weakpoint too
+        - I just need to add higher hp, higher speed, higher hearing and fov capacity
+    - if not
+        - gonna have to create something similar myself
 
 - Add a picture showing sentries weakpoints
-    - Turrets were SO ANNOYING (to the point I was actually thinking about scrapping them) till I randomly found out they have a weakpoint, its that lower part of the thingy they have on their side, its colored depending on the turret type. The hitbox is really small. Im almost 100% sure its even smaller that in Receivers turrets.
 
 - Endless mode:     (aka. "Give me all the nodes, give them NOW")
     - I heard you like shooting nodes? Now each hold will spawn RANDOM AMOUNT of completely RANDOM COMBINATION of nodes.
@@ -59,13 +60,15 @@ Remember though, each seconds loses you points, so better come in prepared.
 ## BONUS:
 ```
 Maybe you want to create your own Meatyceiver character?
-Maybe you really love Llock and you think its the best pistol in the game?
+Maybe you really love Llock and you think its the best pistol in the game, and no other is needed?
 Your hunger for shooting nodes is still unfulfilled and you need more?
 ```
 
-**INTRODUCING: CHARACTER_GENERATOR.PS1**
+**INTRODUCING: CHARGEN**
 
-I've included a simple powershell script that I personally use to create the characters themselves!
+<sub>*wow, catchy name*</sub>
+
+I've included a simple cli tool that I personally use to create the characters themselves!
 
 The output then can be additionally modified to your liking, to really put **U** in "Yo**U**r character". 
 

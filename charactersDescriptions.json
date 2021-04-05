@@ -1,67 +1,96 @@
 ﻿[
   {
-    "Name": "Gaston",
-    "Description": "The most reliable guy for the job.",
+    "Name": "Meatyceiver Gaston",
+    "Version": "0.0.1",
+    "Description": "The most reliable guy for the job.\\nStarts with a Glock19.",
     "SignatureWeapon": "G19",
     "SignatureMelee": "Tanto",
     "StartingMagsAmount": 2,
-    "AmmoTiers": {
-      "tier0":"9x19mmCartridgeTracer",
-      "tier1":"9x19mmCartridgeJHP",
-      "tier2":"9x19mmCartridge+PFMJ",
-      "tier3":"9x19mmCartridge+PJHP",
-      "tier4":"9x19mmCartridge+PAPI"
-    },
-    "Magazines": [
+    "AmmoIdTiers": [
+      "9x19mmCartridgeTracer",
+      "9x19mmCartridgeJHP",
+      "9x19mmCartridge+PFMJ",
+      "9x19mmCartridge+PJHP",
+      "9x19mmCartridge+PAPI"
+    ],
+    "MagazineIds": [
       "MagazineG19_19rnd",
       "MagazineG17Standard"
     ],
     "AmmoShopMultiplier": 1,
     "SosigHpModifier": 0.8,
     "SosigSpeedModifier": 1,
-    "EncryptionsModifier": 0.8
+    "EncryptionsModifier": 0.8,
+    "AdditionalContentPath": "C:\\Users\\Osa-Lapek\\RiderProjects\\Meatyceiver-Gang\\template"
   },
   {
-    "Name": "Anton",
-    "Description": "Let me do a soundcheck... on your head!",
+    "Name": "Meatyceiver Anton",
+    "Version": "0.0.1",
+    "Description": "Let me do a soundcheck... on your head!\\nStarts with a M1911.",
     "SignatureWeapon": "M1911",
-    "SignatureMelee": "Karambit",
+    "SignatureMelee": "MF_Bat",
     "StartingMagsAmount": 2,
-    "AmmoTiers": {
-      "tier0":"45ACPCartridgeTracer",
-      "tier1":"45ACPCartridgeJHP",
-      "tier2":"45ACPCartridge+PFMJ",
-      "tier3":"45ACPCartridge+PJHP",
-      "tier4":"45ACPCartridge+PAPI"
-    },
-    "Magazines": [
+    "AmmoIdTiers": [
+      "45ACPCartridgeTracer",
+      "45ACPCartridgeJHP",
+      "45ACPCartridge+PFMJ",
+      "45ACPCartridge+PJHP",
+      "45ACPCartridge+PAPI"
+    ],
+    "MagazineIds": [
       "MagazineM1911",
       "MagazineM1911Tactical"
     ],
     "AmmoShopMultiplier": 1,
     "SosigHpModifier": 1,
     "SosigSpeedModifier": 1,
-    "EncryptionsModifier": 0.7
+    "EncryptionsModifier": 0.7,
+    "AdditionalContentPath": "C:\\Users\\Osa-Lapek\\RiderProjects\\Meatyceiver-Gang\\template"
   },
   {
-    "Name": "Mr. B.",
-    "Description": "Thats gonna sting.",
+    "Name": "Meatyceiver Mr. B.",
+    "Version": "0.0.1",
+    "Description": "That's gonna sting.\\nStarts with a FiveSeven.",
     "SignatureWeapon": "FiveSevenFDE",
     "SignatureMelee": "CombatKnife",
     "StartingMagsAmount": 1,
-    "AmmoTiers": {
-      "tier0":"fillAmmoTypes",
-      "tier1":"fillAmmoTypes",
-      "tier2":"fillAmmoTypes",
-      "tier3":"fillAmmoTypes",
-      "tier4":"fillAmmoTypes"
-    },
-    "Magazines": [
+    "AmmoIdTiers": [
+      "57x28mmCartridgeTracer",
+      "57x28mmCartridgeJHP",
+      "57x28mmCartridgeIncendiary",
+      "57x28mmCartridgeAP",
+      "57x28mmCartridgeAPIncendiary"
+    ],
+    "MagazineIds": [
       "MagazineFiveSeven"
     ],
     "AmmoShopMultiplier": 1,
     "SosigHpModifier": 1,
     "SosigSpeedModifier": 1.1,
-    "EncryptionsModifier": 0.9
+    "EncryptionsModifier": 0.9,
+    "AdditionalContentPath": "C:\\Users\\Osa-Lapek\\RiderProjects\\Meatyceiver-Gang\\template"
+  },
+  {
+    "Name": "Meatyceiver Flynn",
+    "Version": "0.0.1",
+    "Description": "I'm just getting started.\nStarts with a M590A1/MCS870? shotgun.",
+    "SignatureWeapon": "FiveSevenFDE",
+    "SignatureMelee": "CombatKnife",
+    "StartingMagsAmount": 1,
+    "AmmoIdTiers": [
+      "57x28mmCartridgeTracer",
+      "57x28mmCartridgeJHP",
+      "57x28mmCartridgeIncendiary",
+      "57x28mmCartridgeAP",
+      "57x28mmCartridgeAPIncendiary"
+    ],
+    "MagazineIds": [
+      "MagazineFiveSeven"
+    ],
+    "AmmoShopMultiplier": 1,
+    "SosigHpModifier": 1,
+    "SosigSpeedModifier": 1.1,
+    "EncryptionsModifier": 0.9,
+    "AdditionalContentPath": "C:\\Users\\Osa-Lapek\\RiderProjects\\Meatyceiver-Gang\\template"
   }
 ]
