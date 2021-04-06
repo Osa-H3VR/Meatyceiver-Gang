@@ -17,7 +17,7 @@
       "reallyNoDrumsPls-objectId"
     ],
     "AmmoShopMultiplier": 1, 
-    "SosigHpModifier": 1,
+    "SosigToughnessModifier": 1,
     "SosigSpeedModifier": 1,
     "EncryptionsModifier": 1
   }

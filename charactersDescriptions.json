@@ -3,9 +3,17 @@
     "Name": "Meatyceiver Gaston",
     "Version": "0.0.1",
     "Description": "The most reliable guy for the job.\\nStarts with a Glock19.",
-    "SignatureWeapon": "G19",
-    "SignatureMelee": "Tanto",
+    "SignatureWeaponId": "G19",
+    "SignatureMeleeId": "Tanto",
     "StartingMagsAmount": 2,
+    "AmmoDropAmountMultiplier": 1,
+    "AmmoDropChanceMultiplier": 1,
+    "MagazineIds": [
+      "MagazineG19_19rnd",
+      "MagazineG17Standard"
+    ],
+    "MagCost": 3,
+    "AmmoShopMultiplier": 1,
     "AmmoIdTiers": [
       "9x19mmCartridgeTracer",
       "9x19mmCartridgeJHP",
@@ -13,23 +21,26 @@
       "9x19mmCartridge+PJHP",
       "9x19mmCartridge+PAPI"
     ],
-    "MagazineIds": [
-      "MagazineG19_19rnd",
-      "MagazineG17Standard"
-    ],
-    "AmmoShopMultiplier": 1,
-    "SosigHpModifier": 0.8,
+    "SosigToughnessModifier": 0.3,
     "SosigSpeedModifier": 1,
     "EncryptionsModifier": 0.8,
-    "AdditionalContentPath": "C:\\Users\\Osa-Lapek\\RiderProjects\\Meatyceiver-Gang\\template"
+    "AdditionalContentPath": "C:\\Users\\Osa-Master\\RiderProjects\\Meatyceiver-Gang\\template"
   },
   {
     "Name": "Meatyceiver Anton",
     "Version": "0.0.1",
     "Description": "Let me do a soundcheck... on your head!\\nStarts with a M1911.",
-    "SignatureWeapon": "M1911",
-    "SignatureMelee": "MF_Bat",
+    "SignatureWeaponId": "M1911",
+    "SignatureMeleeId": "MF_Bat",
     "StartingMagsAmount": 2,
+    "MagazineIds": [
+      "MagazineM1911",
+      "MagazineM1911Tactical"
+    ],
+    "MagCost": 2,
+    "AmmoDropAmountMultiplier": 1,
+    "AmmoDropChanceMultiplier": 1,
+    "AmmoShopMultiplier": 1,
     "AmmoIdTiers": [
       "45ACPCartridgeTracer",
       "45ACPCartridgeJHP",
@@ -37,23 +48,25 @@
       "45ACPCartridge+PJHP",
       "45ACPCartridge+PAPI"
     ],
-    "MagazineIds": [
-      "MagazineM1911",
-      "MagazineM1911Tactical"
-    ],
-    "AmmoShopMultiplier": 1,
-    "SosigHpModifier": 1,
+    "SosigToughnessModifier": 0.2,
     "SosigSpeedModifier": 1,
     "EncryptionsModifier": 0.7,
-    "AdditionalContentPath": "C:\\Users\\Osa-Lapek\\RiderProjects\\Meatyceiver-Gang\\template"
+    "AdditionalContentPath": "C:\\Users\\Osa-Master\\RiderProjects\\Meatyceiver-Gang\\template"
   },
   {
-    "Name": "Meatyceiver Mr. B.",
+    "Name": "Meatyceiver Mr B",
     "Version": "0.0.1",
     "Description": "That's gonna sting.\\nStarts with a FiveSeven.",
-    "SignatureWeapon": "FiveSevenFDE",
-    "SignatureMelee": "CombatKnife",
+    "SignatureWeaponId": "FiveSevenFDE",
+    "SignatureMeleeId": "CombatKnife",
     "StartingMagsAmount": 1,
+    "MagazineIds": [
+      "MagazineFiveSeven"
+    ],
+    "MagCost": 4,
+    "AmmoDropAmountMultiplier": 1,
+    "AmmoDropChanceMultiplier": 1,
+    "AmmoShopMultiplier": 1,
     "AmmoIdTiers": [
       "57x28mmCartridgeTracer",
       "57x28mmCartridgeJHP",
@@ -61,36 +74,9 @@
       "57x28mmCartridgeAP",
       "57x28mmCartridgeAPIncendiary"
     ],
-    "MagazineIds": [
-      "MagazineFiveSeven"
-    ],
-    "AmmoShopMultiplier": 1,
-    "SosigHpModifier": 1,
+    "SosigToughnessModifier": 0.2,
     "SosigSpeedModifier": 1.1,
     "EncryptionsModifier": 0.9,
-    "AdditionalContentPath": "C:\\Users\\Osa-Lapek\\RiderProjects\\Meatyceiver-Gang\\template"
-  },
-  {
-    "Name": "Meatyceiver Flynn",
-    "Version": "0.0.1",
-    "Description": "I'm just getting started.\nStarts with a M590A1/MCS870? shotgun.",
-    "SignatureWeapon": "FiveSevenFDE",
-    "SignatureMelee": "CombatKnife",
-    "StartingMagsAmount": 1,
-    "AmmoIdTiers": [
-      "57x28mmCartridgeTracer",
-      "57x28mmCartridgeJHP",
-      "57x28mmCartridgeIncendiary",
-      "57x28mmCartridgeAP",
-      "57x28mmCartridgeAPIncendiary"
-    ],
-    "MagazineIds": [
-      "MagazineFiveSeven"
-    ],
-    "AmmoShopMultiplier": 1,
-    "SosigHpModifier": 1,
-    "SosigSpeedModifier": 1.1,
-    "EncryptionsModifier": 0.9,
-    "AdditionalContentPath": "C:\\Users\\Osa-Lapek\\RiderProjects\\Meatyceiver-Gang\\template"
+    "AdditionalContentPath": "C:\\Users\\Osa-Master\\RiderProjects\\Meatyceiver-Gang\\template"
   }
 ]

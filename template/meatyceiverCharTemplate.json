@@ -1,7 +1,7 @@
 ﻿{
   "DisplayName": "_Name_",
   "Description": "_Description_",
-  "CharacterGroup": 3,
+  "CharacterGroup": 2,
   "TableID": "_NameId_",
   "StartingTokens": 3,
   "ForceAllAgentWeapons": false,
@@ -161,16 +161,11 @@
       "SpawnMagAndClip": false,
       "BespokeAttachmentChance": 0.5,
       "IsCompatibleMagazine": false,
-      "AutoPopulateGroup": true,
+      "AutoPopulateGroup": false,
       "ForceSpawnAllSubPools": false,
-      "IDOverride": [],
-      "Eras": [
-        "PostWar",
-        "Modern"
-      ],
-      "Sets": [
-        "Real"
-      ],
+      "IDOverride": ["_SignatureMeleeId_"],
+      "Eras": [],
+      "Sets": [],
       "Sizes": [],
       "Actions": [],
       "Modes": [],
@@ -179,9 +174,7 @@
       "MountsAvailable": [],
       "RoundPowers": [],
       "Features": [],
-      "MeleeStyles": [
-        "Tactical"
-      ],
+      "MeleeStyles": [],
       "MeleeHandedness": [],
       "MountTypes": [],
       "PowerupTypes": [],
@@ -255,13 +248,13 @@
       "TokenCostLimited": 1,
       "MinLevelAppears": 0,
       "MaxLevelAppears": 0,
-      "SpawnsInSmallCase": false,
+      "SpawnsInSmallCase": true,
       "SpawnsInLargeCase": false,
       "PrimaryGroup": {
         "Category": "Firearm",
         "Rarity": 10.0,
         "RequiredQuest": null,
-        "ItemsToSpawn": 1,
+        "ItemsToSpawn": "_10_AmmoShopMultiplier_",
         "MinAmmoCapacity": 6,
         "MaxAmmoCapacity": 13,
         "NumMagsSpawned": 3,
@@ -294,7 +287,7 @@
             "Category": "Firearm",
             "Rarity": 10.0,
             "RequiredQuest": null,
-            "ItemsToSpawn": "10_AmmoShopCheap_",
+            "ItemsToSpawn": "_10_AmmoShopMultiplier_",
             "MinAmmoCapacity": 6,
             "MaxAmmoCapacity": 13,
             "NumMagsSpawned": 3,
@@ -306,7 +299,7 @@
             "AutoPopulateGroup": false,
             "ForceSpawnAllSubPools": false,
             "IDOverride": [
-              "_AmmoTier0_"
+              "_AmmoIdTiers0_"
             ],
             "Eras": [],
             "Sets": [],
@@ -377,7 +370,7 @@
             "Category": "Firearm",
             "Rarity": 10.0,
             "RequiredQuest": null,
-            "ItemsToSpawn": "10_AmmoShopCheap_",
+            "ItemsToSpawn": "_10_AmmoShopMultiplier_",
             "MinAmmoCapacity": 6,
             "MaxAmmoCapacity": 13,
             "NumMagsSpawned": 3,
@@ -389,7 +382,7 @@
             "AutoPopulateGroup": false,
             "ForceSpawnAllSubPools": false,
             "IDOverride": [
-              "_AmmoTier0_"
+              "_AmmoIdTiers0_"
             ],
             "Eras": [],
             "Sets": [],
@@ -413,7 +406,7 @@
             "Category": "Firearm",
             "Rarity": 10.0,
             "RequiredQuest": null,
-            "ItemsToSpawn": "10_AmmoShopCheap_",
+            "ItemsToSpawn": "_10_AmmoShopMultiplier_",
             "MinAmmoCapacity": 6,
             "MaxAmmoCapacity": 13,
             "NumMagsSpawned": 3,
@@ -425,7 +418,7 @@
             "AutoPopulateGroup": false,
             "ForceSpawnAllSubPools": false,
             "IDOverride": [
-              "_AmmoTier1_"
+              "_AmmoIdTiers1_"
             ],
             "Eras": [],
             "Sets": [],
@@ -496,7 +489,7 @@
             "Category": "Firearm",
             "Rarity": 8.0,
             "RequiredQuest": null,
-            "ItemsToSpawn": "10_AmmoShopCheap_",
+            "ItemsToSpawn": "_10_AmmoShopMultiplier_",
             "MinAmmoCapacity": 6,
             "MaxAmmoCapacity": 13,
             "NumMagsSpawned": 3,
@@ -508,7 +501,7 @@
             "AutoPopulateGroup": false,
             "ForceSpawnAllSubPools": false,
             "IDOverride": [
-              "_AmmoTier0_"
+              "_AmmoIdTiers0_"
             ],
             "Eras": [],
             "Sets": [],
@@ -532,7 +525,7 @@
             "Category": "Firearm",
             "Rarity": 10.0,
             "RequiredQuest": null,
-            "ItemsToSpawn": "10_AmmoShopCheap_",
+            "ItemsToSpawn": "_10_AmmoShopMultiplier_",
             "MinAmmoCapacity": 6,
             "MaxAmmoCapacity": 13,
             "NumMagsSpawned": 3,
@@ -544,7 +537,7 @@
             "AutoPopulateGroup": false,
             "ForceSpawnAllSubPools": false,
             "IDOverride": [
-              "_AmmoTier1_"
+              "_AmmoIdTiers1_"
             ],
             "Eras": [],
             "Sets": [],
@@ -568,7 +561,7 @@
             "Category": "Firearm",
             "Rarity": 7.0,
             "RequiredQuest": null,
-            "ItemsToSpawn": "10_AmmoShopCheap_",
+            "ItemsToSpawn": "_10_AmmoShopMultiplier_",
             "MinAmmoCapacity": 6,
             "MaxAmmoCapacity": 13,
             "NumMagsSpawned": 3,
@@ -580,7 +573,7 @@
             "AutoPopulateGroup": false,
             "ForceSpawnAllSubPools": false,
             "IDOverride": [
-              "_AmmoTier2_"
+              "_AmmoIdTiers2_"
             ],
             "Eras": [],
             "Sets": [],
@@ -651,7 +644,7 @@
             "Category": "Firearm",
             "Rarity": 10.0,
             "RequiredQuest": null,
-            "ItemsToSpawn": "10_AmmoShopCheap_",
+            "ItemsToSpawn": "_10_AmmoShopMultiplier_",
             "MinAmmoCapacity": 6,
             "MaxAmmoCapacity": 13,
             "NumMagsSpawned": 3,
@@ -663,7 +656,7 @@
             "AutoPopulateGroup": false,
             "ForceSpawnAllSubPools": false,
             "IDOverride": [
-              "_AmmoTier0_"
+              "_AmmoIdTiers0_"
             ],
             "Eras": [],
             "Sets": [],
@@ -687,7 +680,7 @@
             "Category": "Firearm",
             "Rarity": 8.0,
             "RequiredQuest": null,
-            "ItemsToSpawn": "10_AmmoShopCheap_",
+            "ItemsToSpawn": "_10_AmmoShopMultiplier_",
             "MinAmmoCapacity": 6,
             "MaxAmmoCapacity": 13,
             "NumMagsSpawned": 3,
@@ -699,7 +692,7 @@
             "AutoPopulateGroup": false,
             "ForceSpawnAllSubPools": false,
             "IDOverride": [
-              "_AmmoTier1_"
+              "_AmmoIdTiers1_"
             ],
             "Eras": [],
             "Sets": [],
@@ -723,7 +716,7 @@
             "Category": "Firearm",
             "Rarity": 9.0,
             "RequiredQuest": null,
-            "ItemsToSpawn": "10_AmmoShopCheap_",
+            "ItemsToSpawn": "_10_AmmoShopMultiplier_",
             "MinAmmoCapacity": 6,
             "MaxAmmoCapacity": 13,
             "NumMagsSpawned": 3,
@@ -735,7 +728,7 @@
             "AutoPopulateGroup": false,
             "ForceSpawnAllSubPools": false,
             "IDOverride": [
-              "_AmmoTier2_"
+              "_AmmoIdTiers2_"
             ],
             "Eras": [],
             "Sets": [],
@@ -759,7 +752,7 @@
             "Category": "Firearm",
             "Rarity": 7.0,
             "RequiredQuest": null,
-            "ItemsToSpawn": "10_AmmoShopCheap_",
+            "ItemsToSpawn": "_10_AmmoShopMultiplier_",
             "MinAmmoCapacity": 6,
             "MaxAmmoCapacity": 13,
             "NumMagsSpawned": 3,
@@ -771,7 +764,7 @@
             "AutoPopulateGroup": false,
             "ForceSpawnAllSubPools": false,
             "IDOverride": [
-              "_AmmoTier3_"
+              "_AmmoIdTiers3_"
             ],
             "Eras": [],
             "Sets": [],
@@ -798,19 +791,19 @@
 
     {
       "_Name": "premium boolets H0",
-      "Type": "Firearm",
-      "IconName": "bullets.png",
+      "Type": "Equipment",
+      "IconName": "betterBullets.png",
       "TokenCost": 2,
       "TokenCostLimited": 2,
       "MinLevelAppears": 0,
       "MaxLevelAppears": 0,
-      "SpawnsInSmallCase": false,
+      "SpawnsInSmallCase": true,
       "SpawnsInLargeCase": false,
       "PrimaryGroup": {
         "Category": "Firearm",
         "Rarity": 10.0,
         "RequiredQuest": null,
-        "ItemsToSpawn": 1,
+        "ItemsToSpawn": "_15_AmmoShopMultiplier_",
         "MinAmmoCapacity": 6,
         "MaxAmmoCapacity": 13,
         "NumMagsSpawned": 3,
@@ -843,7 +836,7 @@
             "Category": "Firearm",
             "Rarity": 10.0,
             "RequiredQuest": null,
-            "ItemsToSpawn": "15_AmmoShopPremium_",
+            "ItemsToSpawn": "_15_AmmoShopMultiplier_",
             "MinAmmoCapacity": 6,
             "MaxAmmoCapacity": 13,
             "NumMagsSpawned": 3,
@@ -855,7 +848,7 @@
             "AutoPopulateGroup": false,
             "ForceSpawnAllSubPools": false,
             "IDOverride": [
-              "_AmmoTier0_"
+              "_AmmoIdTiers0_"
             ],
             "Eras": [],
             "Sets": [],
@@ -879,7 +872,7 @@
             "Category": "Firearm",
             "Rarity": 20.0,
             "RequiredQuest": null,
-            "ItemsToSpawn": "15_AmmoShopPremium_",
+            "ItemsToSpawn": "_15_AmmoShopMultiplier_",
             "MinAmmoCapacity": 6,
             "MaxAmmoCapacity": 13,
             "NumMagsSpawned": 3,
@@ -891,7 +884,7 @@
             "AutoPopulateGroup": false,
             "ForceSpawnAllSubPools": false,
             "IDOverride": [
-              "_AmmoTier1_"
+              "_AmmoIdTiers1_"
             ],
             "Eras": [],
             "Sets": [],
@@ -915,13 +908,59 @@
       },
       "BackupGroup": null
     },
+    {
+      "_Name": "mag",
+      "Type": "Equipment",
+      "IconName": "magazine.png",
+      "TokenCost": "_MagCost_",
+      "TokenCostLimited": "_MagCost_",
+      "MinLevelAppears": 0,
+      "MaxLevelAppears": 0,
+      "SpawnsInSmallCase": true,
+      "SpawnsInLargeCase": false,
+      "PrimaryGroup": {
+        "Category": "Firearm",
+        "Rarity": 10.0,
+        "RequiredQuest": null,
+        "ItemsToSpawn": 1,
+        "MinAmmoCapacity": 6,
+        "MaxAmmoCapacity": 13,
+        "NumMagsSpawned": 3,
+        "NumClipsSpawned": 3,
+        "NumRoundsSpawned": 8,
+        "SpawnMagAndClip": false,
+        "BespokeAttachmentChance": 0.5,
+        "IsCompatibleMagazine": false,
+        "AutoPopulateGroup": false,
+        "ForceSpawnAllSubPools": false,
+        "IDOverride": "_MagazineIds_",
+        "Eras": [],
+        "Sets": [],
+        "Sizes": [],
+        "Actions": [],
+        "Modes": [],
+        "ExcludedModes": [],
+        "FeedOptions": [],
+        "MountsAvailable": [],
+        "RoundPowers": [],
+        "Features": [],
+        "MeleeStyles": [],
+        "MeleeHandedness": [],
+        "MountTypes": [],
+        "PowerupTypes": [],
+        "ThrownTypes": [],
+        "ThrownDamageTypes": [],
+        "SubGroups": null
+      },
+      "BackupGroup": null
+    },
 
     {
       "_Name": "Frags",
       "Type": "Consumable",
       "IconName": "TNH_Icon_grenade",
-      "TokenCost": 1,
-      "TokenCostLimited": 6,
+      "TokenCost": 3,
+      "TokenCostLimited": 1,
       "MinLevelAppears": 0,
       "MaxLevelAppears": 5,
       "SpawnsInSmallCase": false,
@@ -984,7 +1023,7 @@
         "Category": "Thrown",
         "Rarity": 3.0,
         "RequiredQuest": null,
-        "ItemsToSpawn": 3,
+        "ItemsToSpawn": 4,
         "MinAmmoCapacity": -1,
         "MaxAmmoCapacity": -1,
         "NumMagsSpawned": 3,
@@ -1022,27 +1061,25 @@
   ],
   "Levels": [
     {
-      "NumOverrideTokensForHold": 3,
-      "MinSupplyPoints": 1,
-      "MaxSupplyPoints": 1,
+      "NumOverrideTokensForHold": 4,
+      "MinSupplyPoints": 2,
+      "MaxSupplyPoints": 2,
       "MinConstructors": 1,
       "MaxConstructors": 1,
-      "MinPanels": 1,
-      "MaxPanels": 1,
+      "MinPanels": 0,
+      "MaxPanels": 0,
       "MinBoxesSpawned": 1,
       "MaxBoxesSpawned": 1,
       "MinTokensPerSupply": 0,
       "MaxTokensPerSupply": 0,
       "BoxTokenChance": 0.0,
       "BoxHealthChance": 1,
-      "PossiblePanelTypes": [
-        "MagDuplicator"
-      ],
+      "PossiblePanelTypes": [],
       "TakeChallenge": {
         "TurretType": "SMG",
-        "EnemyType": "M_Swat_Guard",
-        "NumTurrets": 2,
-        "NumGuards": 0,
+        "EnemyType": "sosig_Replicant_Light",
+        "NumTurrets": 0,
+        "NumGuards": 1,
         "IFFUsed": 1
       },
       "HoldPhases": [
@@ -1050,10 +1087,10 @@
           "Encryptions": [
             "Static"
           ],
-          "MinTargets": "10_EncryptionsModifier_",
-          "MaxTargets": "10_EncryptionsModifier_",
-          "MinTargetsLimited": "10_EncryptionsModifier_",
-          "MaxTargetsLimited": "10_EncryptionsModifier_",
+          "MinTargets": "_10_EncryptionsModifier_",
+          "MaxTargets": "_10_EncryptionsModifier_",
+          "MinTargetsLimited": "_10_EncryptionsModifier_",
+          "MaxTargetsLimited": "_10_EncryptionsModifier_",
           "EnemyType": [
             "sosig_Robro_HoldSpecific"
           ],
@@ -1074,10 +1111,10 @@
           "Encryptions": [
             "Stealth"
           ],
-          "MinTargets": "10_EncryptionsModifier_",
-          "MaxTargets": "10_EncryptionsModifier_",
-          "MinTargetsLimited": "10_EncryptionsModifier_",
-          "MaxTargetsLimited": "10_EncryptionsModifier_",
+          "MinTargets": "_10_EncryptionsModifier_",
+          "MaxTargets": "_10_EncryptionsModifier_",
+          "MinTargetsLimited": "_10_EncryptionsModifier_",
+          "MaxTargetsLimited": "_10_EncryptionsModifier_",
           "EnemyType": [
             "sosig_Robro_HoldSpecific"
           ],
@@ -1099,10 +1136,10 @@
             "Swarm",
             "Recursive"
           ],
-          "MinTargets": "4_EncryptionsModifier_",
-          "MaxTargets": "4_EncryptionsModifier_",
-          "MinTargetsLimited": "3_EncryptionsModifier_",
-          "MaxTargetsLimited": "3_EncryptionsModifier_",
+          "MinTargets": "_6_EncryptionsModifier_",
+          "MaxTargets": "_6_EncryptionsModifier_",
+          "MinTargetsLimited": "_5_EncryptionsModifier_",
+          "MaxTargetsLimited": "_5_EncryptionsModifier_",
           "EnemyType": [
             "sosig_Robro_HoldSpecific"
           ],
@@ -1111,7 +1148,7 @@
           "MaxEnemies": 1,
           "MaxEnemiesAlive": 1,
           "MaxDirections": 1,
-          "SpawnCadence": 60.0,
+          "SpawnCadence": 30.0,
           "ScanTime": 10.0,
           "WarmupTime": 1.0,
           "IFFUsed": 1,
@@ -1122,7 +1159,7 @@
       ],
       "SupplyChallenge": {
         "TurretType": "SMG",
-        "EnemyType": "M_Swat_Guard",
+        "EnemyType": "sosig_Replicant_Light",
         "NumTurrets": 1,
         "NumGuards": 0,
         "IFFUsed": 1
@@ -1130,14 +1167,14 @@
       "Patrols": [
         {
           "EnemyType": [
-            "sosig_Replicant"
+            "sosig_Replicant_Light"
           ],
-          "LeaderType": "sosig_Replicant",
+          "LeaderType": "sosig_Replicant_Light",
           "PatrolSize": 1,
-          "MaxPatrols": 5,
+          "MaxPatrols": 6,
           "MaxPatrolsLimited": 3,
-          "PatrolCadence": 60.0,
-          "PatrolCadenceLimited": 80.0,
+          "PatrolCadence": 20.0,
+          "PatrolCadenceLimited": 40.0,
           "IFFUsed": 1,
           "SwarmPlayer": false,
           "AssualtSpeed": "Walking",
@@ -1187,10 +1224,10 @@
             
             "Regenerative"
           ],
-          "MinTargets": "10_EncryptionsModifier_",
-          "MaxTargets": "10_EncryptionsModifier_",
-          "MinTargetsLimited": "10_EncryptionsModifier_",
-          "MaxTargetsLimited": "10_EncryptionsModifier_",
+          "MinTargets": "_10_EncryptionsModifier_",
+          "MaxTargets": "_10_EncryptionsModifier_",
+          "MinTargetsLimited": "_10_EncryptionsModifier_",
+          "MaxTargetsLimited": "_10_EncryptionsModifier_",
           "EnemyType": [
             "sosig_Robro_HoldSpecific"
           ],
@@ -1218,9 +1255,9 @@
       "Patrols": [
         {
           "EnemyType": [
-            "sosig_Replicant"
+            "sosig_Replicant_Light"
           ],
-          "LeaderType": "sosig_Replicant",
+          "LeaderType": "sosig_Replicant_Light",
           "PatrolSize": 1,
           "MaxPatrols": 6,
           "MaxPatrolsLimited": 4,

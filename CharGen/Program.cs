@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 
 namespace CharGen
@@ -17,17 +21,6 @@ namespace CharGen
             _optionalStrings = new[] {"EquipmentPools"};
         }
 
-        // Values to replace
-        //
-        // Calculate values:
-        // _MinTargetsEndless1_
-        // _MaxTargetsEndless1_
-        // _AmmoShopPremium_
-        // _AmmoShopCheap_
-        // 10_EncryptionsAmount_
-        //
-        // Only replace values
-
         private static readonly string[] _optionalStrings;
 
         private static string _manifestFileTemplate;
@@ -36,6 +29,90 @@ namespace CharGen
         private static string _innerFolderpath;
 
         private static List<MeatyCharacter> _toCreate;
+        
+        static string ReplaceFields(object obj, string input)
+        {
+            string output = input;
+            var type = obj.GetType();
+            var list = type.GetFields();
+            //TODO: Extend if needed
+            Dictionary<Type, ReplaceType> typeMap = new Dictionary<Type, ReplaceType>();
+            typeMap.Add(typeof(string), ReplaceType.Characters);
+            typeMap.Add(typeof(Version), ReplaceType.Characters);
+            typeMap.Add(typeof(int), ReplaceType.Number);
+            typeMap.Add(typeof(float), ReplaceType.Number);
+            typeMap.Add(typeof(List<string>), ReplaceType.List);
+
+            Regex regex;
+
+            //TODO! Check if there is more than one ReplaceAdditions attribute, if yes, throw exception.
+            foreach (var field in list)
+            {
+                if (field.GetCustomAttribute(typeof(ReplaceValue)) is ReplaceValue att)
+                {
+                    if (typeMap[field.FieldType] == ReplaceType.Characters)
+                    {
+                        //Do a normal replace 1:1 replace
+                        output = Helpers.ReplaceInString(output, $"_{field.Name}_", field.GetValue(obj)?.ToString());
+                    }
+                    else if (typeMap[field.FieldType] == ReplaceType.Number)
+                    {
+                        regex = new Regex($"\"_(\\d+\\.?\\d*)_{field.Name}_\"");
+                        var multiplyMatches = regex.Matches(output);
+                        foreach (Match match in multiplyMatches)
+                        {
+                            //Converting to float should be okay here I think
+                            output = Helpers.ReplaceAndMultiply(output, match.Groups["0"].Value,
+                                float.Parse(match.Groups["1"].Value), (float) field.GetValue(obj), att.AllowFloat);
+                        }
+
+                        regex = new Regex($"\"_{field.Name}_\"");
+                        var replaceMatches = regex.Matches(output);
+                        foreach (Match match in replaceMatches)
+                        {
+                            output = Helpers.ReplaceInString(output, match.Groups["0"].Value,
+                                field.GetValue(obj)?.ToString());
+                        }
+
+                        //TODO Here add support for partial replaces for number, so it doesnt have to always surrounded with ""
+                    }
+                    else if (typeMap[field.FieldType] == ReplaceType.List)
+                    {
+                        //TODO Instead of string.Join, which uses ToString(), probably should use serialization, to make complex classes also supported. This is faster tho :)
+                        if (field.GetValue(obj) is IEnumerable IEnum)
+                        {
+                            if (att.AsNumbered)
+                            {
+                                int i = 0;
+                                foreach (var elem in IEnum)
+                                {
+                                    output = Helpers.ReplaceInString(output, $"_{field.Name}{i}_", elem.ToString());
+                                    i++;
+                                }
+                            }
+                            else
+                            {
+                                string toReplaceWith = string.Empty;
+                                foreach (var elem in IEnum)
+                                {
+                                    toReplaceWith += $"\"{elem.ToString()}\"";
+                                    toReplaceWith += ',';
+                                }
+
+                                toReplaceWith = $"[{toReplaceWith.Substring(0, toReplaceWith.Length - 1)}]";
+                                output = Helpers.ReplaceInString(output, $"\"_{field.Name}_\"", toReplaceWith);
+                            }
+                        }
+                    }
+                }
+                else if (field.GetCustomAttribute(typeof(ReplaceAdditions)) is ReplaceAdditions additions)
+                {
+                    //TODO! 
+                }
+            }
+
+            return output;
+        }
 
         static void Main(string[] args)
         {
@@ -45,7 +122,6 @@ namespace CharGen
             _toCreate = JsonConvert.DeserializeObject<List<MeatyCharacter>>(File.ReadAllText(args[0]));
             _characterFileTemplate = File.ReadAllText(args[1]);
             _manifestFileTemplate = File.ReadAllText(args[2]);
-            var test = File.ReadAllText(args[2]);
 
             foreach (var character in _toCreate)
             {
@@ -72,34 +148,12 @@ namespace CharGen
         {
             Console.WriteLine($"Processing {character.Name}.");
             string output = _characterFileTemplate;
-            // Replacing additional options
-            foreach (var opt in character.AdditionalOptions)
+
+            if (string.IsNullOrWhiteSpace(character.NameId))
             {
-                if (string.IsNullOrWhiteSpace(opt.Value))
-                {
-                    continue;
-                }
-
-                if (!_optionalStrings.Contains(opt.Key))
-                {
-                    continue;
-                }
-
-                output = Helpers.ReplaceInString(output, opt.Key, opt.Value, false);
+                character.NameId = character.Name.Replace(" ", string.Empty).ToLowerInvariant();
             }
-
-            output = Helpers.ReplaceInString(output, "NameId",
-                $"{character.Name.ToLowerInvariant().Replace(" ", string.Empty)}");
-            output = Helpers.ReplaceInString(output, "Name", $"\"{character.Name}\"");
-            output = Helpers.ReplaceInString(output, "Description", $"\"{character.Description}\"");
-            output = Helpers.ReplaceInString(output, "SignatureWeaponId", $"\"{character.SignatureWeaponId}\"");
-            output = Helpers.ReplaceInString(output, "SignatureMeleeId", $"\"{character.SignatureMeleeId}\"");
-
-            output = Helpers.ReplaceInString(output, "StartingMagsAmount", $"{character.StartingMagsAmount}");
-
             
-            output = Helpers.ReplaceInString(output, "MagazineIds", $"[{string.Join(',', character.MagazineIds.Select(x => $"\"{x}\""))}]");
-
             if (character.AmmoIdTiers.Count > 5)
             {
                 throw new Exception($"AmmoIdTiers is bigger than 5!");
@@ -111,16 +165,8 @@ namespace CharGen
                     $"AmmoIdTiers is only {character.AmmoIdTiers.Count}, replicating last one to fill up to 5.");
                 character.AmmoIdTiers.Add(character.AmmoIdTiers.Last());
             }
-
-            for (int i = 0; i < 5; i++)
-            {
-                output = Helpers.ReplaceInString(output, $"AmmoTier{i}", $"\"{character.AmmoIdTiers[i]}\"");
-            }
-
-            output = Helpers.ReplaceAndMultiply(output, "AmmoShopCheap", character.AmmoShopMultiplier);
-            output = Helpers.ReplaceAndMultiply(output, "AmmoShopPremium", character.AmmoShopMultiplier);
-
-            output = Helpers.ReplaceAndMultiply(output, "EncryptionsModifier", character.EncryptionsModifier);
+            
+            output = ReplaceFields(character, output);
 
             return output;
         }
@@ -128,29 +174,23 @@ namespace CharGen
         private static string GenerateManifest(MeatyCharacter character)
         {
             string output = _manifestFileTemplate;
-            output = Helpers.ReplaceInString(output, "Name", $"{character.Name}", false);
-            output = Helpers.ReplaceInString(output, "NameId",
-                $"{character.Name.ToLowerInvariant().Replace(" ", string.Empty)}", false);
-            output = Helpers.ReplaceInString(output, "Version", $"\"{character.Version}\"");
+            output = ReplaceFields(character, output);
 
             if (!string.IsNullOrWhiteSpace(character.AdditionalContentPath))
             {
                 List<string> sosigList = new List<string>();
-                    List<string> additionalContentList = Directory.GetFiles(character.AdditionalContentPath).ToList();
+                List<string> additionalContentList = Directory.GetFiles(character.AdditionalContentPath).ToList();
                 // Copy all additional files needed
                 foreach (var file in additionalContentList)
                 {
                     if (Path.GetFileName(file).StartsWith("sosig"))
                     {
                         string sosig = File.ReadAllText(file);
-
-                        //TODO: Apply sosig multipliers
-                        sosig = Helpers.ReplaceAndMultiply(sosig, "\"SosigHpModifier\"", character.SosigHpModifier, ignoreIfNotFound:true, floatAllowed:true);
-                        sosig = Helpers.ReplaceAndMultiply(sosig, "\"SosigSpeedModifier\"", character.SosigSpeedModifier, ignoreIfNotFound:true, floatAllowed:true);
+                        
+                        sosig = ReplaceFields(character, sosig);
 
                         File.WriteAllText(Path.Combine(_innerFolderpath, Path.GetFileName(file)), sosig);
 
-                        //TODO: Add sosig file to manifest list
                         sosigList.Add($"\"{character.Name}/{Path.GetFileName(file)}\": \"h3vr.tnhtweaker.deli:sosig\"");
                     }
 
@@ -159,12 +199,12 @@ namespace CharGen
                         File.Copy(file, Path.Combine(_innerFolderpath, Path.GetFileName(file)));
                     }
                 }
-                
+
                 //TODO why tho?
                 output = output.Replace(@":""_RemoveMe_""", string.Empty);
-                
+
                 string manifestSosigList = string.Join(",\n", sosigList.ToArray());
-                output = Helpers.ReplaceInString(output, "CustomSosigs",
+                output = Helpers.ReplaceInString(output, "\"_CustomSosigs_\"",
                     manifestSosigList);
             }
 
@@ -174,77 +214,33 @@ namespace CharGen
 
     public static class Helpers
     {
-        public static string ReplaceAndMultiply(string input, string fieldName, float mult,
-            bool floatAllowed = false, bool ignoreIfNotFound=false)
+        public static string ReplaceAndMultiply(string input, string fieldName, float baseNumber, float mult,
+            bool floatAllowed = false)
         {
-            int lastIndex = input.IndexOf($"{fieldName}_\"", StringComparison.Ordinal);
-
-            if (lastIndex == -1)
-            {
-                if (!ignoreIfNotFound)
-                {
-                    throw new KeyNotFoundException("Value not found!");
-                }
-                else
-                {
-                    return input;
-                }
-            }
-
-            lastIndex = lastIndex - 1;
-            int currentIndex = lastIndex;
-            if (currentIndex == 0)
-            {
-                throw new KeyNotFoundException("It starts actually at index 0, no place for a number!");
-            }
-
-            char currentChar;
-            currentIndex = currentIndex;
-            //TODO! EW YUCKY
-            while (true)
-            {
-                currentChar = input[currentIndex - 1];
-
-                if (int.TryParse(currentChar.ToString(), out int result) || currentChar == '.' || currentChar == ',')
-                {
-                    currentIndex = currentIndex - 1;
-                }
-                else
-                {
-                    break;
-                }
-            }
-
-            string number = input.Substring(currentIndex, lastIndex - currentIndex).Replace('.',',');
-            if (!float.TryParse(number, out float resultF))
-            {
-                throw new Exception($"Couldnt parse {number}!");
-            }
+            string output = input;
 
             if (floatAllowed)
             {
-                int toSet = (int) (resultF * mult);
-                input = ReplaceInString(input, fieldName, toSet.ToString(), false);
-                return input;
+                float toSet = baseNumber * mult;
+                output = output.Replace(fieldName, toSet.ToString(CultureInfo.InvariantCulture));
             }
             else
             {
-                float toSet = resultF * mult;
-                input = ReplaceInString(input, fieldName, toSet.ToString(CultureInfo.InvariantCulture), false);
-                return input;
+                int toSet = (int) (baseNumber * mult);
+                output = output.Replace(fieldName, toSet.ToString());
             }
+
+            return output;
         }
 
         // Remember to add any needed chars before to the value! For example, strings will have to be:
         // value = $"\"string\"";
-        public static string ReplaceInString(string input, string fieldName, string value, bool includeEars = true)
+        public static string ReplaceInString(string input, string fieldName, string value)
         {
-            string toReplace = $"_{fieldName}_";
-            if (includeEars)
-                toReplace = $"\"{toReplace}\"";
+            string output = input;
 
-            input = input.Replace(toReplace, value);
-            return input;
+            output = output.Replace(fieldName, value);
+            return output;
         }
 
         public static int ExtractNumber(string str) => int.Parse(str.Substring(0, str.IndexOf('_')));
