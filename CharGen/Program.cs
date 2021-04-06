@@ -189,9 +189,9 @@ namespace CharGen
                         
                         sosig = ReplaceFields(character, sosig);
 
-                        File.WriteAllText(Path.Combine(_innerFolderpath, Path.GetFileName(file)), sosig);
-
-                        sosigList.Add($"\"{character.Name}/{Path.GetFileName(file)}\": \"h3vr.tnhtweaker.deli:sosig\"");
+                        string newFileName = $"{Path.GetFileNameWithoutExtension(file)}-{character.NameId}.json";
+                        File.WriteAllText(Path.Combine(_innerFolderpath, newFileName), sosig);
+                        sosigList.Add($"\"{character.Name}/{newFileName}\": \"h3vr.tnhtweaker.deli:sosig\"");
                     }
 
                     if (Path.GetFileName(file).EndsWith(".png"))

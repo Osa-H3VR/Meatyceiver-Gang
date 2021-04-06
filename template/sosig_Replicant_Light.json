@@ -1,7 +1,7 @@
 {
-  "DisplayName": "sosig_Replicant_Light",
+  "DisplayName": "sosig_Replicant_Light_NameId_",
   "SosigEnemyCategory": "Misc",
-  "SosigEnemyID": "sosig_Replicant_Light",
+  "SosigEnemyID": "sosig_Replicant_Light_NameId_",
   "SosigPrefabs": [
     "SosigBody_Junkbot"
   ],
