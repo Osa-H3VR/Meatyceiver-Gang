@@ -131,12 +131,12 @@ namespace CharGen
                 var folderName = Path.Combine(_outputFolder, character.Name.Replace(" ", string.Empty) + character.Version.ToString());
 
                 if (Directory.Exists(folderName))
-                    Directory.Delete(folderName);
+                    Directory.Delete(folderName, true);
                     //throw new Exception($"Directory {folderName} already exists!");
 
                 var innerFolderpath = Path.Combine(folderName, character.Name);
                 if (Directory.Exists(innerFolderpath))
-                    Directory.Delete(innerFolderpath);
+                    Directory.Delete(innerFolderpath, true);
                     //throw new Exception($"Directory {innerFolderpath} already exists!");
                     
                 Directory.CreateDirectory(innerFolderpath);
