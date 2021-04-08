@@ -1,7 +1,7 @@
 {
-  "DisplayName": "sosig_Replicant_Heavy_NameId_",
+  "DisplayName": "sosig_Replicant_Heavy-_NameId_",
   "SosigEnemyCategory": "Misc",
-  "SosigEnemyID": "sosig_Replicant_Heavy_NameId_",
+  "SosigEnemyID": "sosig_Replicant_Heavy-_NameId_",
   "SosigPrefabs": [
     "SosigBody_Junkbot"
   ],

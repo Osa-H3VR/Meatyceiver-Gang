@@ -8,11 +8,11 @@
   "ForceDisableOutfitFunctionality": false,
   "UsesPurchasePriceIncrement": false,
   "HasPrimaryWeapon": true,
-  "HasSecondaryWeapon": true,
+  "HasSecondaryWeapon": false,
   "HasTertiaryWeapon": true,
   "HasPrimaryItem": true,
-  "HasSecondaryItem": false,
-  "HasTertiaryItem": false,
+  "HasSecondaryItem": true,
+  "HasTertiaryItem": true,
   "HasShield": false,
   "ValidAmmoEras": [
     "Colonial",
@@ -112,10 +112,10 @@
   },
   "SecondaryWeapon": {
     "PrimaryGroup": {
-      "Category": "Firearm",
+      "Category": "Powerup",
       "Rarity": 1.0,
       "RequiredQuest": null,
-      "ItemsToSpawn": "_StartingMagsAmount_",
+      "ItemsToSpawn": 1,
       "MinAmmoCapacity": 1,
       "MaxAmmoCapacity": 99,
       "NumMagsSpawned": 0,
@@ -126,7 +126,7 @@
       "IsCompatibleMagazine": false,
       "AutoPopulateGroup": false,
       "ForceSpawnAllSubPools": false,
-      "IDOverride": "_MagazineIds_",
+      "IDOverride": [],
       "Eras": [],
       "Sets": [],
       "Sizes": [],
@@ -228,11 +228,114 @@
     "BackupGroup": null
   },
   "SecondaryItem": {
-    "PrimaryGroup": null,
+    "PrimaryGroup":{
+    "Category": "Powerup",
+    "Rarity": 1.0,
+    "RequiredQuest": null,
+    "ItemsToSpawn": "_StartingMagsAmount_",
+    "MinAmmoCapacity": 1,
+    "MaxAmmoCapacity": 99,
+    "NumMagsSpawned": 0,
+    "NumClipsSpawned": 0,
+    "NumRoundsSpawned": 0,
+    "SpawnMagAndClip": false,
+    "BespokeAttachmentChance": 0.5,
+    "IsCompatibleMagazine": false,
+    "AutoPopulateGroup": false,
+    "ForceSpawnAllSubPools": false,
+    "IDOverride": "_MagazineIds_",
+    "Eras": [],
+    "Sets": [],
+    "Sizes": [],
+    "Actions": [],
+    "Modes": [],
+    "ExcludedModes": [],
+    "FeedOptions": [],
+    "MountsAvailable": [],
+    "RoundPowers": [],
+    "Features": [],
+    "MeleeStyles": [],
+    "MeleeHandedness": [],
+    "MountTypes": [],
+    "PowerupTypes": [],
+    "ThrownTypes": [],
+    "ThrownDamageTypes": [],
+    "SubGroups": null
+  },
     "BackupGroup": null
   },
   "TertiaryItem": {
-    "PrimaryGroup": null,
+    "PrimaryGroup": {
+      "Category": "Attachment",
+      "Rarity": 1.0,
+      "RequiredQuest": null,
+      "ItemsToSpawn": 1,
+      "MinAmmoCapacity": -1,
+      "MaxAmmoCapacity": -1,
+      "NumMagsSpawned": 3,
+      "NumClipsSpawned": 3,
+      "NumRoundsSpawned": 8,
+      "SpawnMagAndClip": false,
+      "BespokeAttachmentChance": 0.5,
+      "IsCompatibleMagazine": false,
+      "AutoPopulateGroup": false,
+      "ForceSpawnAllSubPools": true,
+      "IDOverride": [],
+      "Eras": [],
+      "Sets": [],
+      "Sizes": [],
+      "Actions": [],
+      "Modes": [],
+      "ExcludedModes": [],
+      "FeedOptions": [],
+      "MountsAvailable": [],
+      "RoundPowers": [],
+      "Features": [],
+      "MeleeStyles": [],
+      "MeleeHandedness": [],
+      "MountTypes": [],
+      "PowerupTypes": [],
+      "ThrownTypes": [],
+      "ThrownDamageTypes": [],
+      "SubGroups": [
+        {
+          "Category": "Attachment",
+          "Rarity": 1.0,
+          "RequiredQuest": null,
+          "ItemsToSpawn": 1,
+          "MinAmmoCapacity": -1,
+          "MaxAmmoCapacity": -1,
+          "NumMagsSpawned": 3,
+          "NumClipsSpawned": 3,
+          "NumRoundsSpawned": 8,
+          "SpawnMagAndClip": false,
+          "BespokeAttachmentChance": 0.5,
+          "IsCompatibleMagazine": false,
+          "AutoPopulateGroup": false,
+          "ForceSpawnAllSubPools": false,
+          "IDOverride": [
+            "UtilityFlashlight"
+          ],
+          "Eras": [],
+          "Sets": [],
+          "Sizes": [],
+          "Actions": [],
+          "Modes": [],
+          "ExcludedModes": [],
+          "FeedOptions": [],
+          "MountsAvailable": [],
+          "RoundPowers": [],
+          "Features": [],
+          "MeleeStyles": [],
+          "MeleeHandedness": [],
+          "MountTypes": [],
+          "PowerupTypes": [],
+          "ThrownTypes": [],
+          "ThrownDamageTypes": [],
+          "SubGroups": null
+        }
+      ]
+    },
     "BackupGroup": null
   },
   "Shield": {
@@ -248,10 +351,10 @@
       "TokenCostLimited": 1,
       "MinLevelAppears": 0,
       "MaxLevelAppears": 0,
-      "SpawnsInSmallCase": true,
+      "SpawnsInSmallCase": false,
       "SpawnsInLargeCase": false,
       "PrimaryGroup": {
-        "Category": "Firearm",
+        "Category": "Cartridge",
         "Rarity": 10.0,
         "RequiredQuest": null,
         "ItemsToSpawn": "_10_AmmoShopMultiplier_",
@@ -797,10 +900,10 @@
       "TokenCostLimited": 2,
       "MinLevelAppears": 0,
       "MaxLevelAppears": 0,
-      "SpawnsInSmallCase": true,
+      "SpawnsInSmallCase": false,
       "SpawnsInLargeCase": false,
       "PrimaryGroup": {
-        "Category": "Firearm",
+        "Category": "Cartridge",
         "Rarity": 10.0,
         "RequiredQuest": null,
         "ItemsToSpawn": "_15_AmmoShopMultiplier_",
@@ -1077,7 +1180,7 @@
       "PossiblePanelTypes": [],
       "TakeChallenge": {
         "TurretType": "SMG",
-        "EnemyType": "sosig_Replicant_Light",
+        "EnemyType": "sosig_Replicant_Light-_NameId_",
         "NumTurrets": 0,
         "NumGuards": 1,
         "IFFUsed": 1
@@ -1092,14 +1195,14 @@
           "MinTargetsLimited": "_10_EncryptionsModifier_",
           "MaxTargetsLimited": "_10_EncryptionsModifier_",
           "EnemyType": [
-            "sosig_Robro_HoldSpecific"
+            "sosig_Robro_HoldSpecific-_NameId_"
           ],
-          "LeaderType": "sosig_Robro_HoldSpecific",
+          "LeaderType": "sosig_Robro_HoldSpecific-_NameId_",
           "MinEnemies": 1,
           "MaxEnemies": 1,
           "MaxEnemiesAlive": 1,
           "MaxDirections": 1,
-          "SpawnCadence": 60.0,
+          "SpawnCadence": 45.0,
           "ScanTime": 10.0,
           "WarmupTime": 5.0,
           "IFFUsed": 1,
@@ -1116,34 +1219,9 @@
           "MinTargetsLimited": "_10_EncryptionsModifier_",
           "MaxTargetsLimited": "_10_EncryptionsModifier_",
           "EnemyType": [
-            "sosig_Robro_HoldSpecific"
+            "sosig_Robro_HoldSpecific-_NameId_"
           ],
-          "LeaderType": "sosig_Robro_HoldSpecific",
-          "MinEnemies": 1,
-          "MaxEnemies": 1,
-          "MaxEnemiesAlive": 1,
-          "MaxDirections": 1,
-          "SpawnCadence": 60.0,
-          "ScanTime": 10.0,
-          "WarmupTime": 1.0,
-          "IFFUsed": 1,
-          "GrenadeChance": 0.0,
-          "GrenadeType": "Sosiggrenade_Flash",
-          "SwarmPlayer": true
-        },
-        {
-          "Encryptions": [
-            "Swarm",
-            "Recursive"
-          ],
-          "MinTargets": "_6_EncryptionsModifier_",
-          "MaxTargets": "_6_EncryptionsModifier_",
-          "MinTargetsLimited": "_5_EncryptionsModifier_",
-          "MaxTargetsLimited": "_5_EncryptionsModifier_",
-          "EnemyType": [
-            "sosig_Robro_HoldSpecific"
-          ],
-          "LeaderType": "sosig_Robro_HoldSpecific",
+          "LeaderType": "sosig_Robro_HoldSpecific-_NameId_",
           "MinEnemies": 1,
           "MaxEnemies": 1,
           "MaxEnemiesAlive": 1,
@@ -1159,7 +1237,7 @@
       ],
       "SupplyChallenge": {
         "TurretType": "SMG",
-        "EnemyType": "sosig_Replicant_Light",
+        "EnemyType": "sosig_Replicant_Light-_NameId_",
         "NumTurrets": 1,
         "NumGuards": 0,
         "IFFUsed": 1
@@ -1167,11 +1245,11 @@
       "Patrols": [
         {
           "EnemyType": [
-            "sosig_Replicant_Light"
+            "sosig_Replicant_Light-_NameId_"
           ],
-          "LeaderType": "sosig_Replicant_Light",
-          "PatrolSize": 1,
-          "MaxPatrols": 6,
+          "LeaderType": "sosig_Replicant_Light-_NameId_",
+          "PatrolSize": 2,
+          "MaxPatrols": 5,
           "MaxPatrolsLimited": 3,
           "PatrolCadence": 20.0,
           "PatrolCadenceLimited": 40.0,
@@ -1229,9 +1307,9 @@
           "MinTargetsLimited": "_10_EncryptionsModifier_",
           "MaxTargetsLimited": "_10_EncryptionsModifier_",
           "EnemyType": [
-            "sosig_Robro_HoldSpecific"
+            "sosig_Robro_HoldSpecific-_NameId_"
           ],
-          "LeaderType": "sosig_Robro_HoldSpecific",
+          "LeaderType": "sosig_Robro_HoldSpecific-_NameId_",
           "MinEnemies": 1,
           "MaxEnemies": 1,
           "MaxEnemiesAlive": 1,
@@ -1255,9 +1333,9 @@
       "Patrols": [
         {
           "EnemyType": [
-            "sosig_Replicant_Light"
+            "sosig_Replicant_Light-_NameId_"
           ],
-          "LeaderType": "sosig_Replicant_Light",
+          "LeaderType": "sosig_Replicant_Light-_NameId_",
           "PatrolSize": 1,
           "MaxPatrols": 6,
           "MaxPatrolsLimited": 4,
