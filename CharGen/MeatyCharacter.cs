@@ -22,13 +22,19 @@ namespace CharGen
         /// </summary>
         [ReplaceValue()]
         public int StartingMagsAmount;
-
+        /// <summary>
+        /// Cost of a mag drop in shop
+        /// </summary>
         [ReplaceValue()]
         public int MagCost;
-        
+        /// <summary>
+        /// Multiplies amount of ammo dropped from replicants
+        /// </summary>
         [ReplaceValue()]
         public float AmmoDropAmountMultiplier;
-        
+        /// <summary>
+        /// Multiplies ammo drop chance form replicants
+        /// </summary>
         [ReplaceValue(allowFloat:true)]
         public float AmmoDropChanceMultiplier;
         /// <summary>
