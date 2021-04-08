@@ -25,11 +25,11 @@ namespace CharGen
 
         private static string _manifestFileTemplate;
         private static string _characterFileTemplate;
-        private static string _folderName;
-        private static string _innerFolderpath;
+        private static string _outputFolder;
+
 
         private static List<MeatyCharacter> _toCreate;
-        
+
         static string ReplaceFields(object obj, string input)
         {
             string output = input;
@@ -116,31 +116,35 @@ namespace CharGen
 
         static void Main(string[] args)
         {
-            if (args.Length != 3)
+            if (args.Length != 4)
                 return;
 
             _toCreate = JsonConvert.DeserializeObject<List<MeatyCharacter>>(File.ReadAllText(args[0]));
             _characterFileTemplate = File.ReadAllText(args[1]);
             _manifestFileTemplate = File.ReadAllText(args[2]);
+            _outputFolder = args[3];
 
             foreach (var character in _toCreate)
             {
                 string readyChar = GenerateCharacter(character);
 
-                _folderName = character.Name.Replace(" ", string.Empty) + character.Version.ToString();
+                var folderName = Path.Combine(_outputFolder, character.Name.Replace(" ", string.Empty) + character.Version.ToString());
 
-                if (Directory.Exists(_folderName))
-                    throw new Exception($"Directory {_folderName} already exists!");
+                if (Directory.Exists(folderName))
+                    Directory.Delete(folderName);
+                    //throw new Exception($"Directory {folderName} already exists!");
 
-                _innerFolderpath = Path.Combine(_folderName, character.Name);
-                if (Directory.Exists(_innerFolderpath))
-                    throw new Exception($"Directory {_innerFolderpath} already exists!");
-                Directory.CreateDirectory(_innerFolderpath);
+                var innerFolderpath = Path.Combine(folderName, character.Name);
+                if (Directory.Exists(innerFolderpath))
+                    Directory.Delete(innerFolderpath);
+                    //throw new Exception($"Directory {innerFolderpath} already exists!");
+                    
+                Directory.CreateDirectory(innerFolderpath);
 
-                string readyManifest = GenerateManifest(character);
+                string readyManifest = GenerateManifest(character, innerFolderpath);
 
-                File.WriteAllText(Path.Combine(_innerFolderpath, "character.json"), readyChar);
-                File.WriteAllText(Path.Combine(_folderName, "manifest.json"), readyManifest);
+                File.WriteAllText(Path.Combine(innerFolderpath, "character.json"), readyChar);
+                File.WriteAllText(Path.Combine(folderName, "manifest.json"), readyManifest);
             }
         }
 
@@ -153,7 +157,7 @@ namespace CharGen
             {
                 character.NameId = character.Name.Replace(" ", string.Empty).ToLowerInvariant();
             }
-            
+
             if (character.AmmoIdTiers.Count > 5)
             {
                 throw new Exception($"AmmoIdTiers is bigger than 5!");
@@ -165,13 +169,13 @@ namespace CharGen
                     $"AmmoIdTiers is only {character.AmmoIdTiers.Count}, replicating last one to fill up to 5.");
                 character.AmmoIdTiers.Add(character.AmmoIdTiers.Last());
             }
-            
+
             output = ReplaceFields(character, output);
 
             return output;
         }
 
-        private static string GenerateManifest(MeatyCharacter character)
+        private static string GenerateManifest(MeatyCharacter character, string innerFolderpath)
         {
             string output = _manifestFileTemplate;
             output = ReplaceFields(character, output);
@@ -186,17 +190,17 @@ namespace CharGen
                     if (Path.GetFileName(file).StartsWith("sosig"))
                     {
                         string sosig = File.ReadAllText(file);
-                        
+
                         sosig = ReplaceFields(character, sosig);
 
                         string newFileName = $"{Path.GetFileNameWithoutExtension(file)}-{character.NameId}.json";
-                        File.WriteAllText(Path.Combine(_innerFolderpath, newFileName), sosig);
+                        File.WriteAllText(Path.Combine(innerFolderpath, newFileName), sosig);
                         sosigList.Add($"\"{character.Name}/{newFileName}\": \"h3vr.tnhtweaker.deli:sosig\"");
                     }
 
                     if (Path.GetFileName(file).EndsWith(".png"))
                     {
-                        File.Copy(file, Path.Combine(_innerFolderpath, Path.GetFileName(file)));
+                        File.Copy(file, Path.Combine(innerFolderpath, Path.GetFileName(file)));
                     }
                 }
 
