@@ -1192,7 +1192,7 @@
   "Levels": [
     {
       "_Name": "H1",
-      "NumOverrideTokensForHold": 2,
+      "NumOverrideTokensForHold": "_1.3_MagCost_",
       "MinSupplyPoints": 2,
       "MaxSupplyPoints": 2,
       "MinConstructors": 1,
@@ -1277,6 +1277,108 @@
           ],
           "LeaderType": "sosig_Replicant_Light-_NameId_",
           "PatrolSize": 2,
+          "MaxPatrols": 5,
+          "MaxPatrolsLimited": 3,
+          "PatrolCadence": 20.0,
+          "PatrolCadenceLimited": 40.0,
+          "IFFUsed": 1,
+          "SwarmPlayer": false,
+          "AssualtSpeed": "Walking",
+          "IsBoss": false,
+          "DropChance": 1,
+          "DropsHealth": true
+        }
+      ]
+    },
+    {
+      "_Name": "H2",
+      "NumOverrideTokensForHold": "_1.5_MagCost_",
+      "MinSupplyPoints": 3,
+      "MaxSupplyPoints": 3,
+      "MinConstructors": 1,
+      "MaxConstructors": 1,
+      "MinPanels": 0,
+      "MaxPanels": 0,
+      "MinBoxesSpawned": 2,
+      "MaxBoxesSpawned": 2,
+      "MinTokensPerSupply": 1,
+      "MaxTokensPerSupply": 1,
+      "BoxTokenChance": 1.0,
+      "BoxHealthChance": 1.0,
+      "PossiblePanelTypes": [],
+      "TakeChallenge": {
+        "TurretType": "SMG",
+        "EnemyType": "sosig_Replicant_Light-_NameId_",
+        "NumTurrets": 1,
+        "NumGuards": 2,
+        "IFFUsed": 1
+      },
+      "HoldPhases": [
+        {
+          "Encryptions": [
+            "Static",
+            "Swarm"
+          ],
+          "MinTargets": "_5_EncryptionsModifier_",
+          "MaxTargets": "_5_EncryptionsModifier_",
+          "MinTargetsLimited": "_5_EncryptionsModifier_",
+          "MaxTargetsLimited": "_5_EncryptionsModifier_",
+          "EnemyType": [
+            "sosig_Robro_HoldSpecific-_NameId_"
+          ],
+          "LeaderType": "sosig_Robro_HoldSpecific-_NameId_",
+          "MinEnemies": 1,
+          "MaxEnemies": 1,
+          "MaxEnemiesAlive": 1,
+          "MaxDirections": 1,
+          "SpawnCadence": 45.0,
+          "ScanTime": 10.0,
+          "WarmupTime": 5.0,
+          "IFFUsed": 1,
+          "GrenadeChance": 0.0,
+          "GrenadeType": "Sosiggrenade_Flash",
+          "SwarmPlayer": true
+        },
+        {
+          "Encryptions": [
+            "Hardened",
+            "Recursive"
+          ],
+          "MinTargets": "_4_EncryptionsModifier_",
+          "MaxTargets": "_4_EncryptionsModifier_",
+          "MinTargetsLimited": "_4_EncryptionsModifier_",
+          "MaxTargetsLimited": "_4_EncryptionsModifier_",
+          "EnemyType": [
+            "sosig_Robro_HoldSpecific-_NameId_"
+          ],
+          "LeaderType": "sosig_Robro_HoldSpecific-_NameId_",
+          "MinEnemies": 1,
+          "MaxEnemies": 1,
+          "MaxEnemiesAlive": 1,
+          "MaxDirections": 1,
+          "SpawnCadence": 30.0,
+          "ScanTime": 10.0,
+          "WarmupTime": 1.0,
+          "IFFUsed": 1,
+          "GrenadeChance": 0.0,
+          "GrenadeType": "Sosiggrenade_Flash",
+          "SwarmPlayer": true
+        }
+      ],
+      "SupplyChallenge": {
+        "TurretType": "SMG",
+        "EnemyType": "sosig_Replicant_Light-_NameId_",
+        "NumTurrets": 1,
+        "NumGuards": 0,
+        "IFFUsed": 1
+      },
+      "Patrols": [
+        {
+          "EnemyType": [
+            "sosig_Replicant_Light-_NameId_"
+          ],
+          "LeaderType": "sosig_Replicant_Light-_NameId_",
+          "PatrolSize": 3,
           "MaxPatrols": 5,
           "MaxPatrolsLimited": 3,
           "PatrolCadence": 20.0,

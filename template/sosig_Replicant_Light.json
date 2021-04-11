@@ -88,7 +88,7 @@
       "CanBeSevered": true,
       "CanBeStabbed": false,
       "CanBeSurpressed": true,
-      "SuppressionMult": 0.6,
+      "SuppressionMult": 2.6,
       "DoesJointBreakKill_Head": false,
       "DoesJointBreakKill_Upper": false,
       "DoesJointBreakKill_Lower": false,
