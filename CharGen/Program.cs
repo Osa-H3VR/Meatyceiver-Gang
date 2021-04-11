@@ -61,15 +61,18 @@ namespace CharGen
                         var multiplyMatches = regex.Matches(output);
                         foreach (Match match in multiplyMatches)
                         {
-                            //Converting to float should be okay here I think
+                            //Unboxing, just in case casting wont work
+                            var unbox = Convert.ToSingle(field.GetValue(obj));
                             output = Helpers.ReplaceAndMultiply(output, match.Groups["0"].Value,
-                                float.Parse(match.Groups["1"].Value), (float) field.GetValue(obj), att.AllowFloat);
+                                float.Parse(match.Groups["1"].Value), unbox , att.AllowFloat);
                         }
 
                         regex = new Regex($"\"_{field.Name}_\"");
                         var replaceMatches = regex.Matches(output);
                         foreach (Match match in replaceMatches)
                         {
+                            //Unboxing, just in case casting wont work
+                            var unbox = Convert.ToSingle(field.GetValue(obj));
                             output = Helpers.ReplaceInString(output, match.Groups["0"].Value,
                                 field.GetValue(obj)?.ToString());
                         }
