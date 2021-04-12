@@ -19,7 +19,7 @@ This set of characters is an idea that, at the same time, I wanted to create a R
 - Compete for the highest score with your friends and enemies (frenemies also?)
 - Dangerous patrols, that are worth fighting if you're up for the challange.
 
-##### NOTE: Highly recommending to use https://github.com/gommodore/H3VR.Meatyceiver2 with these characters
+##### NOTE: Highly recommending to use https://github.com/gommodore/H3VR.Meatyceiver2 and https://bonetome.com/h3vr/mods/417/ with these characters
 
 ## Progression changes:
 - Patrolling metal sosigs, they are almost indestructible, evading them is your top priority. If in a pinch, use you tools to distract them or to destroy them.
