@@ -1,14 +1,11 @@
 # Meatyceiver-Gang
 
 ```
-No sosigs in sight
-Atleast no familiar ones
 The only things you hear
 Sound of metal replicants scraping
 Robotic beeps and boops
 Destroy the all the nodes
-Free the world
-Or rather what is left
+Free the world, or rather what is left
 ```
 
 ## Description:
