@@ -6,14 +6,14 @@
     "SignatureWeaponId": "G19",
     "SignatureMeleeId": "Tanto",
     "StartingMagsAmount": 2,
-    "AmmoDropAmountMultiplier": 1,
+    "AmmoDropAmountMultiplier": 0.7,
     "AmmoDropChanceMultiplier": 1,
     "MagazineIds": [
       "MagazineG19_19rnd",
       "MagazineG17Standard"
     ],
     "MagCost": 3,
-    "AmmoShopMultiplier": 1,
+    "AmmoShopMultiplier": 0.7,
     "AmmoIdTiers": [
       "9x19mmCartridgeTracer",
       "9x19mmCartridgeJHP",
@@ -23,13 +23,13 @@
     ],
     "SosigToughnessModifier": 0.3,
     "SosigSpeedModifier": 1,
-    "EncryptionsModifier": 0.8,
+    "EncryptionsModifier": 0.9,
     "AdditionalContentPath": "C:\\Users\\Osa-Master\\RiderProjects\\Meatyceiver-Gang\\template"
   },
   {
     "Name": "Meatyceiver Anton",
     "Version": "0.0.1",
-    "Description": "Let me do a soundcheck... on your head!\\nStarts with a M1911.",
+    "Description": "Let me do a soundcheck... on your face!\\nStarts with a M1911.",
     "SignatureWeaponId": "M1911",
     "SignatureMeleeId": "MF_Bat",
     "StartingMagsAmount": 2,
