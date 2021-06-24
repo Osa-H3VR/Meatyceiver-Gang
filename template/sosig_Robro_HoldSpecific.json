@@ -167,7 +167,7 @@
         }
       ],
       "StartingChanceBrokenJoint": [
-        0.0,
+        1.0,
         0.0,
         0.0,
         0.0
@@ -238,7 +238,7 @@
     "Category": "Firearm",
     "Rarity": 1.0,
     "RequiredQuest": null,
-    "ItemsToSpawn": "_6_AmmoDropAmountMultiplier_",
+    "ItemsToSpawn": "_8_AmmoDropAmountMultiplier_",
     "MinAmmoCapacity": 0,
     "MaxAmmoCapacity": 0,
     "NumMagsSpawned": 0,

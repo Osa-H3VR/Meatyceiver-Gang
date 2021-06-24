@@ -1,28 +1,28 @@
 {
-  "DisplayName": "sosig_Replicant_Light-_NameId_",
+  "DisplayName": "sosig_Seeker_HoldSpecific-_NameId_",
   "SosigEnemyCategory": "Misc",
-  "SosigEnemyID": "sosig_Replicant_Light-_NameId_",
+  "SosigEnemyID": "sosig_Seeker_HoldSpecific-_NameId_",
   "SosigPrefabs": [
     "SosigBody_Junkbot"
   ],
   "Configs": [
     {
-      "ViewDistance": 100.0,
+      "ViewDistance": 200.0,
       "HearingDistance": 100.0,
-      "MaxFOV": 45.0,
-      "SearchExtentsModifier": 1.2,
-      "DoesAggroOnFriendlyFire": true,
+      "MaxFOV": 60.0,
+      "SearchExtentsModifier": 0.6,
+      "DoesAggroOnFriendlyFire": false,
       "HasABrain": true,
       "DoesDropWeaponsOnBallistic": false,
       "CanPickupRanged": true,
       "CanPickupMelee": true,
       "CanPickupOther": true,
-      "TargetCapacity": 2,
+      "TargetCapacity": 5,
       "TargetTrackingTime": 5.0,
       "NoFreshTargetTime": 0.5,
-      "AssaultPointOverridesSkirmishPointWhenFurtherThan": 100.0,
+      "AssaultPointOverridesSkirmishPointWhenFurtherThan": 200.0,
       "RunSpeed": "_1.5_SosigSpeedModifier_",
-      "WalkSpeed": "_1.1_SosigSpeedModifier_",
+      "WalkSpeed": "_0.8_SosigSpeedModifier_",
       "SneakSpeed": "_0.6_SosigSpeedModifier_",
       "CrawlSpeed": "_0.3_SosigSpeedModifier_",
       "TurnSpeed": "_6.0_SosigSpeedModifier_",
@@ -42,7 +42,7 @@
       "DamMult_Chilling": 1.0,
       "DamMult_EMP": 1.0,
       "LinkDamageMultipliers": [
-        "_6.5_SosigToughnessModifier_",
+        "_9.5_SosigToughnessModifier_",
         "_3.0_SosigToughnessModifier_",
         "_0.8_SosigToughnessModifier_",
         "_1.4_SosigToughnessModifier_"
@@ -81,14 +81,14 @@
       "ConfusionThreshold": 0.7,
       "ConfusionMultiplier": 6.0,
       "ConfusionTimeMax": 7.5,
-      "StunThreshold": 0.3,
-      "StunMultiplier": 2.5,
+      "StunThreshold": 0.1,
+      "StunMultiplier": 3.5,
       "StunTimeMax": 6.0,
       "CanBeGrabbed": false,
       "CanBeSevered": true,
       "CanBeStabbed": false,
       "CanBeSurpressed": true,
-      "SuppressionMult": 4.6,
+      "SuppressionMult": 2.6,
       "DoesJointBreakKill_Head": false,
       "DoesJointBreakKill_Upper": false,
       "DoesJointBreakKill_Lower": false,
@@ -198,15 +198,17 @@
   "OutfitConfigs": [
     {
       "Headwear": [
-        "SosigAccessory_MountainMeat_Millitarycap_Blue"
+        "SosigAccessory_Tactical_Helmet_Winter"
       ],
       "Chance_Headwear": 1.0,
       "ForceWearAllHead": false,
       "Eyewear": [],
       "Chance_Eyewear": 0.0,
       "ForceWearAllEye": false,
-      "Facewear": [],
-      "Chance_Facewear": 0.0,
+      "Facewear": [
+        "SosigAccessory_Tactical_Goggles_Swat"
+      ],
+      "Chance_Facewear": 1.0,
       "ForceWearAllFace": false,
       "Torsowear": [
         "SosigAccessory_Tactical_LightArmour_Winter"
@@ -227,8 +229,7 @@
     }
   ],
   "WeaponOptions": [
-   
-    "SosiggunFutureBullpov"
+    "SosiggunFuturePocketToaster"
   ],
   "WeaponOptionsSecondary": [
   ],
@@ -252,7 +253,7 @@
     "IsCompatibleMagazine": false,
     "AutoPopulateGroup": false,
     "ForceSpawnAllSubPools": false,
-    "IDOverride": ["_AmmoIdTiers1_"],
+    "IDOverride": ["_AmmoIdTiers0_"],
     "Eras": [],
     "Sets": [],
     "Sizes": [],
@@ -285,7 +286,7 @@
         "IsCompatibleMagazine": false,
         "AutoPopulateGroup": false,
         "ForceSpawnAllSubPools": false,
-        "IDOverride": ["_AmmoIdTiers1_"],
+        "IDOverride": ["_AmmoIdTiers0_"],
         "Eras": [],
         "Sets": [],
         "Sizes": [],
@@ -319,7 +320,7 @@
         "IsCompatibleMagazine": false,
         "AutoPopulateGroup": false,
         "ForceSpawnAllSubPools": false,
-        "IDOverride": ["_AmmoIdTiers1_"],
+        "IDOverride": ["_AmmoIdTiers0_"],
         "Eras": [],
         "Sets": [],
         "Sizes": [],
@@ -342,7 +343,7 @@
         "Category": "Firearm",
         "Rarity": 3.0,
         "RequiredQuest": null,
-        "ItemsToSpawn": "_3_AmmoDropAmountMultiplier_",
+        "ItemsToSpawn": "_4_AmmoDropAmountMultiplier_",
         "MinAmmoCapacity": 0,
         "MaxAmmoCapacity": 0,
         "NumMagsSpawned": 0,
@@ -353,7 +354,7 @@
         "IsCompatibleMagazine": false,
         "AutoPopulateGroup": false,
         "ForceSpawnAllSubPools": false,
-        "IDOverride": ["_AmmoIdTiers1_"],
+        "IDOverride": ["_AmmoIdTiers0_"],
         "Eras": [],
         "Sets": [],
         "Sizes": [],

@@ -1889,7 +1889,7 @@
       "SpawnsInLargeCase": false,
       "PrimaryGroup":
       {
-        "Category": "Thrown",
+        "Category": "Firearm",
         "Rarity": 3.0,
         "RequiredQuest": null,
         "ItemsToSpawn": 4,
@@ -1946,7 +1946,7 @@
       "PossiblePanelTypes": [],
       "TakeChallenge": {
         "TurretType": "SMG",
-        "EnemyType": "sosig_Replicant_Light-_NameId_",
+        "EnemyType": "sosig_Terminator-_NameId_",
         "NumTurrets": 1,
         "NumGuards": 1,
         "IFFUsed": 1
@@ -2015,15 +2015,15 @@
           ],
           "LeaderType": "sosig_Replicant_Light-_NameId_",
           "PatrolSize": 1,
-          "MaxPatrols": 3,
-          "MaxPatrolsLimited": 5,
+          "MaxPatrols": 5,
+          "MaxPatrolsLimited": 3,
           "PatrolCadence": 10.0,
           "PatrolCadenceLimited": 20.0,
           "IFFUsed": 1,
           "SwarmPlayer": true,
           "AssualtSpeed": "Walking",
           "IsBoss": false,
-          "DropChance": 0.2,
+          "DropChance": 0.1,
           "DropsHealth": true
         }
       ]
@@ -2046,9 +2046,9 @@
       "PossiblePanelTypes": [],
       "TakeChallenge": {
         "TurretType": "SMG",
-        "EnemyType": "sosig_Replicant_Light-_NameId_",
+        "EnemyType": "sosig_Robro_HoldSpecific-_NameId_",
         "NumTurrets": 2,
-        "NumGuards": 2,
+        "NumGuards": 1,
         "IFFUsed": 1
       },
       "HoldPhases": [
@@ -2063,18 +2063,18 @@
           "MaxTargetsLimited": "_8_EncryptionsModifier_",
           "EnemyType": [
             "sosig_Robro_HoldSpecific-_NameId_",
-            "sosig_Seeker_HoldSpecific-_NameId_"
+            "sosig_Replicant_Ninja-_NameId_"
           ],
-          "LeaderType": "sosig_Seeker_HoldSpecific-_NameId_",
-          "MinEnemies": 3,
+          "LeaderType": "sosig_Replicant_Ninja-_NameId_",
+          "MinEnemies": 2,
           "MaxEnemies": 3,
-          "MaxEnemiesAlive": 6,
+          "MaxEnemiesAlive": 4,
           "MaxDirections": 1,
           "SpawnCadence": 45.0,
           "ScanTime": 15.0,
           "WarmupTime": 0.0,
           "IFFUsed": 1,
-          "GrenadeChance": 0.0,
+          "GrenadeChance": 1.0,
           "GrenadeType": "Sosiggrenade_Flash",
           "SwarmPlayer": true
         },
@@ -2084,23 +2084,23 @@
             "Recursive"
           ],
           "MinTargets": "_8_EncryptionsModifier_",
-          "MaxTargets": "_9_EncryptionsModifier_",
+          "MaxTargets": "_8_EncryptionsModifier_",
           "MinTargetsLimited": "_8_EncryptionsModifier_",
           "MaxTargetsLimited": "_8_EncryptionsModifier_",
           "EnemyType": [
             "sosig_Robro_HoldSpecific-_NameId_",
-            "sosig_Seeker_HoldSpecific-_NameId_"
+            "sosig_Replicant_Ninja-_NameId_"
           ],
-          "LeaderType": "sosig_Seeker_HoldSpecific-_NameId_",
-          "MinEnemies": 3,
+          "LeaderType": "sosig_Replicant_Ninja-_NameId_",
+          "MinEnemies": 2,
           "MaxEnemies": 3,
-          "MaxEnemiesAlive": 6,
+          "MaxEnemiesAlive": 4,
           "MaxDirections": 2,
-          "SpawnCadence": 30.0,
+          "SpawnCadence": 35.0,
           "ScanTime": 15.0,
           "WarmupTime": 5.0,
           "IFFUsed": 1,
-          "GrenadeChance": 0.0,
+          "GrenadeChance": 1.0,
           "GrenadeType": "Sosiggrenade_Flash",
           "SwarmPlayer": true
         }
@@ -2119,15 +2119,32 @@
           ],
           "LeaderType": "sosig_Replicant_Light-_NameId_",
           "PatrolSize": 1,
-          "MaxPatrols": 3,
-          "MaxPatrolsLimited": 6,
-          "PatrolCadence": 10.0,
-          "PatrolCadenceLimited": 18.0,
+          "MaxPatrols": 5,
+          "MaxPatrolsLimited": 3,
+          "PatrolCadence": 15.0,
+          "PatrolCadenceLimited": 20.0,
           "IFFUsed": 1,
           "SwarmPlayer": true,
           "AssualtSpeed": "Walking",
           "IsBoss": false,
-          "DropChance": 0.2,
+          "DropChance": 0.1,
+          "DropsHealth": true
+        },
+        {
+          "EnemyType": [
+            "sosig_Replicant_Medium-_NameId_"
+          ],
+          "LeaderType": "sosig_Replicant_Medium-_NameId_",
+          "PatrolSize": 1,
+          "MaxPatrols": 6,
+          "MaxPatrolsLimited": 2,
+          "PatrolCadence": 16.0,
+          "PatrolCadenceLimited": 22.0,
+          "IFFUsed": 1,
+          "SwarmPlayer": true,
+          "AssualtSpeed": "Walking",
+          "IsBoss": false,
+          "DropChance": 0.1,
           "DropsHealth": true
         },
         {
@@ -2136,16 +2153,33 @@
           ],
           "LeaderType": "MountainMeat_Pistol",
           "PatrolSize": 1,
-          "MaxPatrols": 1,
-          "MaxPatrolsLimited": 6,
+          "MaxPatrols": 2,
+          "MaxPatrolsLimited": 2,
           "PatrolCadence": 10.0,
           "PatrolCadenceLimited": 20.0,
-          "IFFUsed": 2,
+          "IFFUsed": 0,
           "SwarmPlayer": true,
           "AssualtSpeed": "Walking",
           "IsBoss": false,
-          "DropChance": 0.2,
+          "DropChance": 0.1,
           "DropsHealth": true
+        },
+        {
+          "EnemyType": [
+            "sosig_Attachment-_NameId_"
+          ],
+          "LeaderType": "sosig_Attachment-_NameId_",
+          "PatrolSize": 1,
+          "MaxPatrols": 1,
+          "MaxPatrolsLimited": 1,
+          "PatrolCadence": 10.0,
+          "PatrolCadenceLimited": 20.0,
+          "IFFUsed": 1,
+          "SwarmPlayer": true,
+          "AssualtSpeed": "Walking",
+          "IsBoss": false,
+          "DropChance": 0,
+          "DropsHealth": false
         }
       ]
     },
@@ -2166,28 +2200,31 @@
       "BoxHealthChance": 1.0,
       "PossiblePanelTypes": [],
       "TakeChallenge": {
-        "TurretType": "Machinegun",
-        "EnemyType": "sosig_Replicant_Light-_NameId_",
+        "TurretType": "SMG",
+        "EnemyType": "sosig_Robro_HoldSpecific-_NameId_",
         "NumTurrets": 2,
-        "NumGuards": 2,
+        "NumGuards": 1,
         "IFFUsed": 1
       },
       "HoldPhases": [
         {
           "Encryptions": [
             "Static",
+            "Static",
             "Swarm"
           ],
-          "MinTargets": "_6_EncryptionsModifier_",
-          "MaxTargets": "_6_EncryptionsModifier_",
-          "MinTargetsLimited": "_6_EncryptionsModifier_",
-          "MaxTargetsLimited": "_6_EncryptionsModifier_",
+          "MinTargets": "_7_EncryptionsModifier_",
+          "MaxTargets": "_7_EncryptionsModifier_",
+          "MinTargetsLimited": "_7_EncryptionsModifier_",
+          "MaxTargetsLimited": "_7_EncryptionsModifier_",
           "EnemyType": [
-            "sosig_Robro_HoldSpecific-_NameId_"
+            "sosig_Robro_HoldSpecific-_NameId_",
+            "sosig_Seeker_HoldSpecific-_NameId_",
+            "sosig_Seeker_HoldSpecific-_NameId_"
           ],
-          "LeaderType": "sosig_Robro_HoldSpecific-_NameId_",
-          "MinEnemies": 1,
-          "MaxEnemies": 1,
+          "LeaderType": "sosig_Seeker_HoldSpecific-_NameId_",
+          "MinEnemies": 4,
+          "MaxEnemies": 4,
           "MaxEnemiesAlive": 1,
           "MaxDirections": 1,
           "SpawnCadence": 45.0,
@@ -2201,18 +2238,21 @@
         {
           "Encryptions": [
             "Hardened",
-            "Recursive"
+            "Recursive",
+            "Swarm"
           ],
-          "MinTargets": "_5_EncryptionsModifier_",
-          "MaxTargets": "_5_EncryptionsModifier_",
-          "MinTargetsLimited": "_5_EncryptionsModifier_",
-          "MaxTargetsLimited": "_5_EncryptionsModifier_",
+          "MinTargets": "_9_EncryptionsModifier_",
+          "MaxTargets": "_9_EncryptionsModifier_",
+          "MinTargetsLimited": "_9_EncryptionsModifier_",
+          "MaxTargetsLimited": "_9_EncryptionsModifier_",
           "EnemyType": [
-            "sosig_Robro_HoldSpecific-_NameId_"
+            "sosig_Robro_HoldSpecific-_NameId_",
+            "sosig_Seeker_HoldSpecific-_NameId_",
+            "sosig_Seeker_HoldSpecific-_NameId_"
           ],
-          "LeaderType": "sosig_Robro_HoldSpecific-_NameId_",
-          "MinEnemies": 1,
-          "MaxEnemies": 1,
+          "LeaderType": "sosig_Seeker_HoldSpecific-_NameId_",
+          "MinEnemies": 4,
+          "MaxEnemies": 4,
           "MaxEnemiesAlive": 1,
           "MaxDirections": 1,
           "SpawnCadence": 30.0,
@@ -2238,16 +2278,84 @@
           ],
           "LeaderType": "sosig_Replicant_Light-_NameId_",
           "PatrolSize": 1,
-          "MaxPatrols": 4,
-          "MaxPatrolsLimited": 6,
-          "PatrolCadence": 10.0,
-          "PatrolCadenceLimited": 15.0,
+          "MaxPatrols": 5,
+          "MaxPatrolsLimited": 3,
+          "PatrolCadence": 17.0,
+          "PatrolCadenceLimited": 22.0,
           "IFFUsed": 1,
           "SwarmPlayer": true,
           "AssualtSpeed": "Walking",
           "IsBoss": false,
-          "DropChance": 0.2,
+          "DropChance": 0.1,
           "DropsHealth": true
+        },
+        {
+          "EnemyType": [
+            "sosig_Replicant_Medium-_NameId_"
+          ],
+          "LeaderType": "sosig_Replicant_Medium-_NameId_",
+          "PatrolSize": 1,
+          "MaxPatrols": 6,
+          "MaxPatrolsLimited": 2,
+          "PatrolCadence": 17.0,
+          "PatrolCadenceLimited": 23.0,
+          "IFFUsed": 1,
+          "SwarmPlayer": true,
+          "AssualtSpeed": "Walking",
+          "IsBoss": false,
+          "DropChance": 0.1,
+          "DropsHealth": true
+        },
+        {
+          "EnemyType": [
+            "sosig_Replicant_Heavy-_NameId_"
+          ],
+          "LeaderType": "sosig_Replicant_Medium-_NameId_",
+          "PatrolSize": 1,
+          "MaxPatrols": 2,
+          "MaxPatrolsLimited": 5,
+          "PatrolCadence": 19.0,
+          "PatrolCadenceLimited": 25.0,
+          "IFFUsed": 1,
+          "SwarmPlayer": true,
+          "AssualtSpeed": "Walking",
+          "IsBoss": false,
+          "DropChance": 0.1,
+          "DropsHealth": true
+        },
+        {
+          "EnemyType": [
+            "MountainMeat_Pistol"
+          ],
+          "LeaderType": "MountainMeat_Pistol",
+          "PatrolSize": 1,
+          "MaxPatrols": 2,
+          "MaxPatrolsLimited": 2,
+          "PatrolCadence": 10.0,
+          "PatrolCadenceLimited": 20.0,
+          "IFFUsed": 0,
+          "SwarmPlayer": true,
+          "AssualtSpeed": "Walking",
+          "IsBoss": false,
+          "DropChance": 0.1,
+          "DropsHealth": true
+        },
+        {
+          "EnemyType": [
+            "sosig_Attachment-_NameId_"
+          ],
+          "LeaderType": "sosig_Attachment-_NameId_",
+          "PatrolSize": 1,
+          "MaxPatrols": 3,
+          "MaxPatrolsLimited": 2,
+          "PatrolCadence": 10.0,
+          "PatrolCadenceLimited": 20.0,
+          "IFFUsed": 1,
+          "SwarmPlayer": true,
+          "AssualtSpeed": "Walking",
+          "IsBoss": false,
+          "DropChance": 0,
+          "DropsHealth": false
         }
       ]
     }
@@ -2322,16 +2430,16 @@
       "Patrols": [
         {
           "EnemyType": [
-            "sosig_Replicant_Light-_NameId_"
+            "sosig_Terminator-_NameId_"
           ],
-          "LeaderType": "sosig_Replicant_Light-_NameId_",
+          "LeaderType": "sosig_Terminator-_NameId_",
           "PatrolSize": 1,
-          "MaxPatrols": 6,
-          "MaxPatrolsLimited": 4,
-          "PatrolCadence": 60.0,
-          "PatrolCadenceLimited": 100.0,
+          "MaxPatrols": 2,
+          "MaxPatrolsLimited": 2,
+          "PatrolCadence": 10.0,
+          "PatrolCadenceLimited": 10.0,
           "IFFUsed": 1,
-          "SwarmPlayer": false,
+          "SwarmPlayer": true,
           "AssualtSpeed": "Walking",
           "IsBoss": false,
           "DropChance": 1,

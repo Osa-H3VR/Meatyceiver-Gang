@@ -3,7 +3,7 @@
     "Name": "Meatyceiver Gaston",
     "Version": "0.0.1",
     "Description": "The most reliable guy for the job.\\nStarts with a Glock19.",
-    "SignatureWeaponId": "G19",
+    "SignatureWeaponId": "G17",
     "SignatureMeleeId": "Tanto",
     "StartingMagsAmount": 2,
     "AmmoDropAmountMultiplier": 0.7,
@@ -13,16 +13,16 @@
       "MagazineG17Standard"
     ],
     "MagCost": 3,
-    "AmmoShopMultiplier": 0.7,
+    "AmmoShopMultiplier": 0.8,
     "AmmoIdTiers": [
-      "9x19mmCartridgeTracer",
+      "9x19mmCartridge",
       "9x19mmCartridgeJHP",
       "9x19mmCartridge+PFMJ",
       "9x19mmCartridge+PJHP",
       "9x19mmCartridge+PAPI"
     ],
     "SosigToughnessModifier": 0.3,
-    "SosigSpeedModifier": 1,
+    "SosigSpeedModifier": 1.1,
     "EncryptionsModifier": 0.9,
     "AdditionalContentPath": "C:\\Users\\Osa-Master\\RiderProjects\\Meatyceiver-Gang\\template"
   },

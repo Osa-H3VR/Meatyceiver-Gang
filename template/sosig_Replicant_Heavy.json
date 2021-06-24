@@ -1,24 +1,24 @@
 {
-  "DisplayName": "sosig_Replicant_Light-_NameId_",
+  "DisplayName": "sosig_Replicant_Heavy-_NameId_",
   "SosigEnemyCategory": "Misc",
-  "SosigEnemyID": "sosig_Replicant_Light-_NameId_",
+  "SosigEnemyID": "sosig_Replicant_Heavy-_NameId_",
   "SosigPrefabs": [
     "SosigBody_Junkbot"
   ],
   "Configs": [
     {
-      "ViewDistance": 100.0,
-      "HearingDistance": 100.0,
-      "MaxFOV": 45.0,
-      "SearchExtentsModifier": 1.2,
+      "ViewDistance": 150.0,
+      "HearingDistance": 200.0,
+      "MaxFOV": 65.0,
+      "SearchExtentsModifier": 0.8,
       "DoesAggroOnFriendlyFire": true,
       "HasABrain": true,
       "DoesDropWeaponsOnBallistic": false,
       "CanPickupRanged": true,
       "CanPickupMelee": true,
       "CanPickupOther": true,
-      "TargetCapacity": 2,
-      "TargetTrackingTime": 5.0,
+      "TargetCapacity": 7,
+      "TargetTrackingTime": 9.0,
       "NoFreshTargetTime": 0.5,
       "AssaultPointOverridesSkirmishPointWhenFurtherThan": 100.0,
       "RunSpeed": "_1.5_SosigSpeedModifier_",
@@ -197,27 +197,31 @@
   ],
   "OutfitConfigs": [
     {
-      "Headwear": [
-        "SosigAccessory_MountainMeat_Millitarycap_Blue"
-      ],
-      "Chance_Headwear": 1.0,
+      "Headwear": [],
+      "Chance_Headwear": 0.0,
       "ForceWearAllHead": false,
       "Eyewear": [],
       "Chance_Eyewear": 0.0,
       "ForceWearAllEye": false,
-      "Facewear": [],
-      "Chance_Facewear": 0.0,
+      "Facewear": [
+        "SosigAccessory_Tactical_WelderMask_Winter"
+      ],
+      "Chance_Facewear": 1.0,
       "ForceWearAllFace": false,
       "Torsowear": [
-        "SosigAccessory_Tactical_LightArmour_Winter"
+        "SosigAccessory_Tactical_MediumArmour_Winter"
       ],
       "Chance_Torsowear": 1.0,
       "ForceWearAllTorso": false,
-      "Pantswear": [],
-      "Chance_Pantswear": 0.0,
+      "Pantswear": [
+        "SosigAccessory_Tactical_HeavyPants_Winter"
+      ],
+      "Chance_Pantswear": 1.0,
       "ForceWearAllPants": false,
-      "Pantswear_Lower": [],
-      "Chance_Pantswear_Lower": 0.0,
+      "Pantswear_Lower": [
+        "SosigAccessory_Tactical_LightPants_Winter"
+      ],
+      "Chance_Pantswear_Lower": 1.0,
       "ForceWearAllPantsLower": false,
       "Backpacks": [
         "SosigAccessory_Tactical_Backpack_Winter"
@@ -227,8 +231,7 @@
     }
   ],
   "WeaponOptions": [
-   
-    "SosiggunFutureBullpov"
+    "SosiggunFutureMeatleStorm"
   ],
   "WeaponOptionsSecondary": [
   ],
@@ -241,7 +244,7 @@
     "Category": "Firearm",
     "Rarity": 1.0,
     "RequiredQuest": null,
-    "ItemsToSpawn": "_4_AmmoDropAmountMultiplier_",
+    "ItemsToSpawn": "_6_AmmoDropAmountMultiplier_",
     "MinAmmoCapacity": 0,
     "MaxAmmoCapacity": 0,
     "NumMagsSpawned": 0,
@@ -252,7 +255,7 @@
     "IsCompatibleMagazine": false,
     "AutoPopulateGroup": false,
     "ForceSpawnAllSubPools": false,
-    "IDOverride": ["_AmmoIdTiers1_"],
+    "IDOverride": ["_AmmoIdTiers3_"],
     "Eras": [],
     "Sets": [],
     "Sizes": [],
@@ -274,7 +277,7 @@
         "Category": "Firearm",
         "Rarity": 1.0,
         "RequiredQuest": null,
-        "ItemsToSpawn": "_5_AmmoDropAmountMultiplier_",
+        "ItemsToSpawn": "_7_AmmoDropAmountMultiplier_",
         "MinAmmoCapacity": 0,
         "MaxAmmoCapacity": 0,
         "NumMagsSpawned": 0,
@@ -285,7 +288,7 @@
         "IsCompatibleMagazine": false,
         "AutoPopulateGroup": false,
         "ForceSpawnAllSubPools": false,
-        "IDOverride": ["_AmmoIdTiers1_"],
+        "IDOverride": ["_AmmoIdTiers4_"],
         "Eras": [],
         "Sets": [],
         "Sizes": [],
@@ -308,7 +311,7 @@
         "Category": "Firearm",
         "Rarity": 2.0,
         "RequiredQuest": null,
-        "ItemsToSpawn": "_4_AmmoDropAmountMultiplier_",
+        "ItemsToSpawn": "_6_AmmoDropAmountMultiplier_",
         "MinAmmoCapacity": 0,
         "MaxAmmoCapacity": 0,
         "NumMagsSpawned": 0,
@@ -319,7 +322,7 @@
         "IsCompatibleMagazine": false,
         "AutoPopulateGroup": false,
         "ForceSpawnAllSubPools": false,
-        "IDOverride": ["_AmmoIdTiers1_"],
+        "IDOverride": ["_AmmoIdTiers4_"],
         "Eras": [],
         "Sets": [],
         "Sizes": [],
@@ -342,7 +345,7 @@
         "Category": "Firearm",
         "Rarity": 3.0,
         "RequiredQuest": null,
-        "ItemsToSpawn": "_3_AmmoDropAmountMultiplier_",
+        "ItemsToSpawn": "_5_AmmoDropAmountMultiplier_",
         "MinAmmoCapacity": 0,
         "MaxAmmoCapacity": 0,
         "NumMagsSpawned": 0,
@@ -353,7 +356,7 @@
         "IsCompatibleMagazine": false,
         "AutoPopulateGroup": false,
         "ForceSpawnAllSubPools": false,
-        "IDOverride": ["_AmmoIdTiers1_"],
+        "IDOverride": ["_AmmoIdTiers4_"],
         "Eras": [],
         "Sets": [],
         "Sizes": [],
