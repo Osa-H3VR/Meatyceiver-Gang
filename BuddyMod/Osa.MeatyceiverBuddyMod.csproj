@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net35</TargetFramework>
+        <LangVersion>9</LangVersion>
+        <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="Deli" Version="0.3.0" />
+        
+      <PackageReference Include="jnm2.ReferenceAssemblies.net35" Version="1.0.1" PrivateAssets="all" />  
+      <PackageReference Include="Nullable" Version="1.3.0" PrivateAssets="all" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <Reference Include="Assembly-CSharp, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>dependencies\Assembly-CSharp-Publicized.dll</HintPath>
+      </Reference>
+      <Reference Include="MMHOOK_Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>dependencies\MMHOOK_Assembly-CSharp.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <PropertyGroup Label="UserPaths">
+        <ResourcesPath>$(MSBuildProjectDirectory)</ResourcesPath>
+        <ModDir>E:\Steam\steamapps\common\H3VR\Deli\mods\MeatyceiverGaston0.0.1</ModDir>
+    </PropertyGroup>
+
+    <!-- This target copies dll to the folder, for quicker debbugging -->
+    <Target Name="CopyDll" AfterTargets="AfterBuild" Condition="'$(ModDir)' != '' ">
+        <Message Text="ModDir present, copying dll to $(ModDir)" />
+        <Copy SourceFiles="$(OutDir)Osa.MeatyceiverBuddyMod.dll" DestinationFolder="$(ModDir)" OverwriteReadOnlyFiles="true" />
+    </Target>
+
+<!--    <Target Name="CreateDeli" AfterTargets="AfterBuild" Condition="'$(ResourcesPath)' != '' ">-->
+<!--        <Message Text="ResourcesPath present, creating .deli output" />-->
+<!--        <Exec Command="powershell -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { .\..\publish.ps1 } &quot;" LogStandardErrorAsError="True" ContinueOnError="False" WorkingDirectory="$(ResourcesPath)" />-->
+<!--    </Target>-->
+
+</Project>

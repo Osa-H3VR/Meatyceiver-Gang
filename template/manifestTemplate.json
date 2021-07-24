@@ -11,8 +11,11 @@
     "Devyn Myers (Take & Hold Tweaker - required)"
   ],
   "assets": {
-    "patcher": {},
+    "patcher": {
+      "hookgen.conf": "deli:monomod.hookgen"
+    },
     "setup": {
+      "Osa.MeatyceiverBuddyMod.dll": "deli:assembly",
       "_CustomSosigs_":"_RemoveMe_",
       "_Name_/": "h3vr.tnhtweaker.deli:character"
     },
