@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace CharGen
@@ -131,7 +133,8 @@ namespace CharGen
             {
                 string readyChar = GenerateCharacter(character);
 
-                var folderName = Path.Combine(_outputFolder, character.Name.Replace(" ", string.Empty) + character.Version.ToString());
+                var charName = character.Name.Replace(" ", string.Empty) + character.Version.ToString();
+                var folderName = Path.Combine(_outputFolder, charName);
 
                 if (Directory.Exists(folderName))
                     Directory.Delete(folderName, true);
@@ -148,7 +151,19 @@ namespace CharGen
 
                 File.WriteAllText(Path.Combine(innerFolderpath, "character.json"), readyChar);
                 File.WriteAllText(Path.Combine(folderName, "manifest.json"), readyManifest);
+                
+                ZipFile.CreateFromDirectory(folderName, Path.Combine(_outputFolder,"delis",charName+".deli"));
             }
+
+            var delisFolder = Path.Combine(_outputFolder, "delis");
+            if (Directory.Exists(delisFolder))
+                Directory.Delete(delisFolder, true);
+            Directory.CreateDirectory(delisFolder);
+
+            var outputZip = Path.Combine(_outputFolder, "Chars.zip");
+            if(File.Exists(outputZip))
+                File.Delete(outputZip);
+            ZipFile.CreateFromDirectory(delisFolder, outputZip);
         }
 
         private static string GenerateCharacter(MeatyCharacter character)

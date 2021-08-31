@@ -1,9 +1,9 @@
 ﻿{
   "guid": "h3vr.tnhtweaker._NameId_",
   "version": "_Version_",
-  "require": "0.3.0",
+  "require": "0.4.0",
   "dependencies": {
-    "h3vr.tnhtweaker.deli": "1.6.0"
+    "osa.meatyceiverbuddy": "0.1.0"
   },
   "name": "_Name_",
   "authors": [
@@ -11,11 +11,7 @@
     "Devyn Myers (Take & Hold Tweaker - required)"
   ],
   "assets": {
-    "patcher": {
-      "hookgen.conf": "deli:monomod.hookgen"
-    },
     "setup": {
-      "Osa.MeatyceiverBuddyMod.dll": "deli:assembly",
       "_CustomSosigs_":"_RemoveMe_",
       "_Name_/": "h3vr.tnhtweaker.deli:character"
     },

@@ -17,7 +17,7 @@ namespace Osa.MeatyceiverBuddyMod
         {
             // There is 1 log message in each of the methods here.
             // Run this mod to see the order of execution logged to console.
-            Logger.LogInfo("BulletGrabber loading...");
+            Logger.LogInfo("MeatyceiverBuddyMod loading...");
 
             // Hook to the setup stage (the first stage we can access)
             // Do not forget! Awake is still ran before ANY event.
